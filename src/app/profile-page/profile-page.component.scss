@@ -1,0 +1,11 @@
+.profile {
+  &__container {
+    display: flex;
+  }
+  &__wrapper {
+    flex: 2 1 70%;
+  }
+  &__sidebar {
+    flex: 2 1 20%;
+  }
+}

@@ -10,6 +10,13 @@ import { FeedPageComponent } from './feed-page/feed-page.component';
 import { NetworkPageComponent } from './network-page/network-page.component';
 import { JobsPageComponent } from './jobs-page/jobs-page.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
+import { ProfileInfoComponent } from './profile-page/profile-info/profile-info.component';
+import { ProfileAboutComponent } from './profile-page/profile-about/profile-about.component';
+import { ProfileProjectsComponent } from './profile-page/profile-projects/profile-projects.component';
+import { ProfileSkillsComponent } from './profile-page/profile-skills/profile-skills.component';
+import { ProfileExperienceComponent } from './profile-page/profile-experience/profile-experience.component';
+import { ProfileEducationComponent } from './profile-page/profile-education/profile-education.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { ChatPageComponent } from './chat-page/chat-page.component';
     FeedPageComponent,
     NetworkPageComponent,
     JobsPageComponent,
-    ChatPageComponent
+    ChatPageComponent,
+    ProfileInfoComponent,
+    ProfileAboutComponent,
+    ProfileProjectsComponent,
+    ProfileSkillsComponent,
+    ProfileExperienceComponent,
+    ProfileEducationComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

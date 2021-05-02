@@ -1,23 +1,47 @@
-<p>header works!</p>
-
-
-<div>
-  <a [routerLink]="['/']" >Logo</a>
+<div class="header">
+  <div class="header__container">
+    <div class="logo">
+      <a [routerLink]="['/profile']" >
+        <img src="../../assets/logo/Logo.svg" alt="">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" [routerLink]="['/feed']">
+            <div class="menu__link__wrapper">
+              <img src="../../assets/icons/rss.svg" alt="">
+              <p class="menu__title">Feed</p>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" [routerLink]="['/network']">
+            <div class="menu__link__wrapper">
+              <img src="../../assets/icons/users.svg" alt="">
+              <p class="menu__title">Network</p>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" [routerLink]="['/jobs']">
+            <div class="menu__link__wrapper">
+              <img src="../../assets/icons/briefcase.svg" alt="">
+              <p class="menu__title">Jobs</p>
+            </div>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" [routerLink]="['/chat']">
+            <div class="menu__link__wrapper">
+              <img src="../../assets/icons/message-square.svg" alt="">
+              <p class="menu__title">Chat</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="search">search block</div>
+    <div>Profile info</div>
+  </div>
 </div>
-<nav>
-  <ul>
-    <li>
-      <a [routerLink]="['/feed']">Feed</a>
-    </li>
-    <li>
-      <a [routerLink]="['/network']">Network</a>
-    </li>
-    <li>
-      <a [routerLink]="['/jobs']">Jobs</a>
-    </li>
-    <li>
-      <a [routerLink]="['/chat']">Chat</a>
-    </li>
-    <li></li>
-  </ul>
-</nav>
