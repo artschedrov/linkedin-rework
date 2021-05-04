@@ -1,4 +1,6 @@
+@import './../../styles/_variables.scss';
+
 div {
   height: 600px;
-  background:deepskyblue;
+  background: $block-color;
 }
