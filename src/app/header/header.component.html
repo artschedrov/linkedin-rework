@@ -52,11 +52,11 @@
     <div class="info">
       <div class="info__container">
         <div>
-          <img class="info__img" src="./../../assets/user.jpeg" alt="">
+          <img class="info__img" [src]="user.avatar" alt="">
         </div>
         <div class="info__text">
-          <p class="info__name">Title</p>
-          <p class="info__stat">Numbers</p>
+          <p class="info__name">{{user.firstName.substring(0, 1)}}.{{user.lastName}} <span>you</span></p>
+          <p class="info__stat">{{user.totalViews}} views today <span>+{{user.newViews}}</span></p>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 @import './../../styles/_variables.scss';
+@import './../../styles/_fonts.scss';
 
 .header {
   position: fixed;
@@ -15,6 +16,7 @@
 }
 
 .menu {
+  font-family: Gotham Pro Regular;
   height: 100%;
   width: 100%;
   display: flex;
@@ -32,6 +34,7 @@
   &__link {
     text-decoration: none;
     font-size: $text-size-small;
+    color: $text-color-primary !important;
     &__wrapper {
       display: flex;
       flex-direction: column;
@@ -51,6 +54,7 @@
 }
 
 .search {
+  font-family: Gotham Pro Regular;
   min-height: 80px;
   width: 100%;
   display: flex;
@@ -63,6 +67,7 @@
     top: 30%;
     width: 100%;
     ::placeholder {
+      font-family: Gotham Pro Regular;
       color: $text-color-light;
     }
   }
@@ -85,6 +90,7 @@
 }
 
 .info {
+  font-family: Gotham Pro Regular;
   width: 100%;
   border-right: solid $fone-color 2px;
   &__container {
@@ -98,10 +104,23 @@
     height: 42px;
     border-radius: 50%;
   }
+  &__text {
+    margin-left: 15px;
+  }
   &__name {
     text-transform: uppercase;
     font-size: $text-size-small;
+    line-height: 11px;
+    span {
+      margin-left: 5px;
+      opacity: 0.2;
+    }
   } 
+  &__stat {
+    span {
+      color: #02B033;
+    }
+  }
 }
 
 .other {
@@ -113,11 +132,3 @@
     }
   }
 }
-
-// button {
-//   cursor: pointer;
-//   width: 100px;
-//   height: 100px;
-//   background-image: radial-gradient(circle, black 10px, transparent 11px);
-//   background-size: 100% 33.33%;
-// }
