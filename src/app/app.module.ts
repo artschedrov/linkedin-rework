@@ -17,6 +17,7 @@ import { ProfileSkillsComponent } from './profile-page/profile-skills/profile-sk
 import { ProfileExperienceComponent } from './profile-page/profile-experience/profile-experience.component';
 import { ProfileEducationComponent } from './profile-page/profile-education/profile-education.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ProfileSkillsComponent,
     ProfileExperienceComponent,
     ProfileEducationComponent,
-    SidebarComponent
+    SidebarComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
