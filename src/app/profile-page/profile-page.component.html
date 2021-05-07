@@ -1,10 +1,29 @@
 <div class="profile__container">
   <div class="profile__wrapper">
     <app-profile-info></app-profile-info>
-    <app-profile-about></app-profile-about>
-    <app-profile-skills></app-profile-skills>
-    <app-profile-experience></app-profile-experience>
-    <app-profile-education></app-profile-education>
+    <div class="profile__navigation">
+      <button class="profile__tab-button" (click)="changeTab($event, 'profile')">Profile</button>
+      <button class="profile__tab-button" (click)="changeTab($event, 'activity')">Activity & interests</button>
+      <button class="profile__tab-button" (click)="changeTab($event, 'articles')">Articles (3)</button>
+    </div>
+    <div id="profile" class="profile__tab profile__tab--active">
+      <div class="profile__tab-item">
+        <app-profile-about></app-profile-about>
+        <app-profile-skills></app-profile-skills>
+        <app-profile-experience></app-profile-experience>
+        <app-profile-education></app-profile-education>
+      </div>
+    </div>
+    <div id="activity" class="profile__tab">
+      <div class="profile__tab-item">
+        <h2>Здесь пока ничего</h2>
+      </div>
+    </div>
+    <div id="articles" class="profile__tab">
+      <div class="profile__tab-item">
+        <h2>Здесь пока ничего</h2>
+      </div>
+    </div>
   </div>
   <div class="profile__sidebar">
     <app-sidebar></app-sidebar>
