@@ -1,0 +1,27 @@
+@import '../../../../styles/_variables.scss';
+@import '../../../../styles/buttons.scss';
+@import '../../../../styles/_fonts.scss';
+
+.profile-about {
+  font-family: Gotham Pro Regular;
+  background: $block-color;
+  &__container {
+    padding: 60px 30px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  &__link {
+    text-decoration: none;
+    color: #0275B1;
+    text-transform: uppercase;
+    line-height: 11px;
+    font-size: $text-size-small;
+  }
+}
