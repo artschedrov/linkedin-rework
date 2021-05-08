@@ -1,0 +1,37 @@
+<div class="profile__container" *ngIf="profiles$ | async as profiles" >
+  <div class="profile__wrapper">
+    <app-profile-info
+    *ngFor="let profile of profiles"
+    [profile]="profile"
+    ></app-profile-info>
+    <div class="profile__navigation">
+      <button class="profile__tab-button profile__tab-button--active" (click)="changeTab($event, 'profile')">Profile</button>
+      <button class="profile__tab-button" (click)="changeTab($event, 'activity')">Activity & interests</button>
+      <button class="profile__tab-button" (click)="changeTab($event, 'articles')">Articles (3)</button>
+    </div>
+    <div id="profile" class="profile__tab profile__tab--active">
+      <div class="profile__tab-item">
+        <app-profile-about *ngFor="let profile of profiles"
+        [profile]="profile"
+        ></app-profile-about>
+        <app-profile-projects></app-profile-projects>
+        <app-profile-skills></app-profile-skills>
+        <app-profile-experience></app-profile-experience>
+        <app-profile-education></app-profile-education>
+      </div>
+    </div>
+    <div id="activity" class="profile__tab">
+      <div class="profile__tab-item">
+        <h2>Здесь пока ничего нет</h2>
+      </div>
+    </div>
+    <div id="articles" class="profile__tab">
+      <div class="profile__tab-item">
+        <h2>Здесь пока ничего нет</h2>
+      </div>
+    </div>
+  </div>
+  <div class="profile__sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>

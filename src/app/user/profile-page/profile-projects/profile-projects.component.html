@@ -1,0 +1,15 @@
+<div class="profile-projects" *ngIf="projects$ | async as projects">
+  <div class="profile-projects__container">
+    <div>
+      <h2>Projects</h2>
+      <div>3 of 12</div>
+    </div>
+    <div class="profile-projects__project-list">
+      <app-profile-project
+      *ngFor="let project of projects"
+      [project]="project"
+      ></app-profile-project>
+    </div>
+
+  </div>
+</div>

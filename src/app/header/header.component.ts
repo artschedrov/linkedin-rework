@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Profile, ProfileViews } from '../user/shared/services/profile.interface';
+import { ProfileService } from '../user/shared/services/profile.service';
 
 
 @Component({
@@ -16,7 +19,8 @@ export class HeaderComponent implements OnInit {
     newViews: 32,
     totalViews: 324,
   }
-
+  @Input()
+  profile!: Profile;
   constructor() {}
 
   ngOnInit() {

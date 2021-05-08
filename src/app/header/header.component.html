@@ -1,14 +1,14 @@
 <div class="header">
   <div class="header__container">
     <div class="logo">
-      <a [routerLink]="['/profile']" >
+      <a [routerLink]="['/user', 'profile']" >
         <img src="../../assets/logo/Logo.svg" alt="">
       </a>
     </div>
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" [routerLink]="['/feed']">
+          <a class="menu__link" [routerLink]="['/user', 'feed']">
             <div class="menu__link__wrapper">
               <img src="../../assets/icons/rss.svg" alt="">
               <p class="menu__title">Feed</p>
@@ -52,11 +52,11 @@
     <div class="info">
       <div class="info__container">
         <div>
-          <img class="info__img" [src]="user.avatar" alt="">
+          <img class="info__img" [src]="profile.avatar" alt="">
         </div>
         <div class="info__text">
-          <p class="info__name">{{user.firstName.substring(0, 1)}}.{{user.lastName}} <span>you</span></p>
-          <p class="info__stat">{{user.totalViews}} views today <span>+{{user.newViews}}</span></p>
+          <p class="info__name">{{profile.firstName.substring(0, 1)}}.{{profile.lastName}} <span>you</span></p>
+          <p class="info__stat">{{profile.views.totalViews}} views today <span>+{{profile.views.newViews}}</span></p>
         </div>
       </div>
     </div>

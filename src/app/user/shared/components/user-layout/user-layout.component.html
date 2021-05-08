@@ -1,0 +1,15 @@
+<header *ngIf="auth.isAuthenticated()">
+    <ng-container *ngIf="profiles$ | async as profiles">
+      <app-header routerLinkActive="active" *ngFor="let profile of profiles"
+    [profile]="profile"
+      ></app-header>
+    </ng-container>
+</header>
+<main>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer *ngIf="auth.isAuthenticated()">
+  <app-footer routerLinkActive="active"></app-footer>
+</footer>
