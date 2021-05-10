@@ -34,16 +34,4 @@ export class ProfileService {
       }));
     }));
   }
-  // getProfileViews(): Observable<ProfileViews[]> {
-  //   return this.http.get(`${environment.fireBaseUrl}/profileViews.json`)
-  //   .pipe(
-  //     map((response: {[key: string]: any}) => {
-  //     return Object
-  //     .keys(response)
-  //     .map(key => ({
-  //       ...response[key],
-  //       id:key
-  //     }));
-  //   }));
-  // }
 }

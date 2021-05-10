@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { ProfileProject } from '../../shared/services/profile.interface';
+import { Profile, ProfileProject } from '../../shared/services/profile.interface';
 import { ProfileService } from '../../shared/services/profile.service';
 
 @Component({
@@ -10,6 +10,8 @@ import { ProfileService } from '../../shared/services/profile.service';
 })
 export class ProfileProjectsComponent implements OnInit {
   projects$!: Observable<ProfileProject[]>;
+  @Input()
+  profile!: Profile;
   constructor(private profilesService: ProfileService) { }
 
   ngOnInit(): void {

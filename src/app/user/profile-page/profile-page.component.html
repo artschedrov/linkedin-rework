@@ -11,10 +11,14 @@
     </div>
     <div id="profile" class="profile__tab profile__tab--active">
       <div class="profile__tab-item">
-        <app-profile-about *ngFor="let profile of profiles"
-        [profile]="profile"
+        <app-profile-about
+          *ngFor="let profile of profiles"
+          [profile]="profile"
         ></app-profile-about>
-        <app-profile-projects></app-profile-projects>
+        <app-profile-projects
+          *ngFor="let profile of profiles"
+          [profile]="profile"
+        ></app-profile-projects>
         <app-profile-skills></app-profile-skills>
         <app-profile-experience></app-profile-experience>
         <app-profile-education></app-profile-education>

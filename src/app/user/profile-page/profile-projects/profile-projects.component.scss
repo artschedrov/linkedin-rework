@@ -1,3 +1,41 @@
+@import '../../../../styles/_variables.scss';
+@import '../../../../styles/_fonts.scss';
+
 .profile-projects {
   background:#fff;
+  font-family: Gotham Pro Regular;
+  margin-top: 20px;
+  &__container {
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: $text-size-big;
+    line-height: 17px;
+    font-weight: bold;
+    span {
+      color: #747474;
+    }
+  }
+  &__project-list {
+    display: flex;
+    justify-content:stretch;
+  }
+  &__project-item {
+    cursor: pointer;
+  }
+  &__project-item + &__project-item {
+    padding-left: 20px;
+  }
+  &__wrapper-link {
+    margin-top: 25px;
+  }
+  &__link {
+    text-decoration: none;
+    color: #0275B1;
+    text-transform: uppercase;
+    line-height: 11px;
+    font-size: $text-size-small;
+  }
 }
