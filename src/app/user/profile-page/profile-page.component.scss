@@ -4,13 +4,14 @@
 .profile {
   &__container {
     display: flex;
-    //padding: 40px 5px 10px 105px;
+    
   }
   &__wrapper {
     flex: 2 1 70%;
   }
   &__sidebar {
-    flex: 2 1 20%;
+    flex: 2 1 30%;
+    margin-left: 40px;
   }
   &__navigation {
     margin-top: 35px;
@@ -25,6 +26,7 @@
     border-bottom: 0;
     padding: 1.2em 4em;
     min-width: 240px;
+    cursor: pointer;
     &--active {
       color: $block-color;
       background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);

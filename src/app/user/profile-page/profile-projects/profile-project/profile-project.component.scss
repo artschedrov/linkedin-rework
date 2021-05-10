@@ -1,0 +1,22 @@
+@import '../../../../../styles/_variables.scss';
+@import '../../../../../styles/_fonts.scss';
+
+.project {
+  font-family: Gotham Pro Regular;
+  &__img-wrapper {
+    width: 250px;
+    height: 160px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    font-size: $text-size-small;
+    line-height: 150%;
+    font-weight: bold;
+  }
+  &__description {
+    font-size: $text-size-very-sm;
+  }
+}

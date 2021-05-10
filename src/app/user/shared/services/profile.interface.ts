@@ -11,7 +11,8 @@ export interface Profile {
   views: {
     totalViews: number,
     newViews: number
-  }
+  },
+  projectCount: number
 }
 
 export interface ProfileViews {
@@ -23,5 +24,6 @@ export interface ProfileProject {
   id: number,
   name: string,
   type: string,
-  date: string
+  date: string,
+  preview: any
 }
