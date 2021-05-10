@@ -1,14 +1,17 @@
-<div class="profile-skills">
+<div class="profile-skills" *ngIf="skills$ | async as skills">
   <div class="profile-skills__container">
-    <div>
-      <h2>Skills & Endoresments</h2>
+    <div class="profile-skills__title-wrapper">
+      <h2 class="profile-skills__title">Skills & Endoresments</h2>
     </div>
-    <div class="profile-skills__project-list">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="profile-skills__skills-list">
+      <app-profile-skill-card class="profile-skills__skills-item"
+        *ngFor="let skill of skills"
+        [skill]="skill"
+      >
+      </app-profile-skill-card>
     </div>
-
+    <div class="profile-skills__wrapper-link">
+      <a class="profile-skills__link" href="#">Show all ({{skills.length}})</a>
+    </div>
   </div>
-  <p>profile-skills works!</p>
 </div>

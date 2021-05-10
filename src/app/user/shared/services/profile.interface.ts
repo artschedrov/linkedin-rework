@@ -27,3 +27,13 @@ export interface ProfileProject {
   date: string,
   preview: any
 }
+
+export interface ProfileSkills {
+  name: string,
+  id: string
+  endoresment: {
+    name: string,
+    id: string,
+    pic: any
+  }  
+}

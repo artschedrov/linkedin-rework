@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProfileSkills } from '../../shared/services/profile.interface';
+import { ProfileService } from '../../shared/services/profile.service';
 
 @Component({
   selector: 'app-profile-skills',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileSkillsComponent implements OnInit {
 
-  constructor() { }
+  skills$!: Observable<ProfileSkills[]>;
+
+  constructor(private profilesService: ProfileService) { }
 
   ngOnInit(): void {
+    this.skills$ = this.profilesService.getProfileSkills();
   }
-
 }

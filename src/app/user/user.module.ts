@@ -20,6 +20,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AuthGuard } from './shared/services/auth.guard';
 import { ErrorPageComponent } from '../error-page/error-page.component';
 import { ProfileProjectComponent } from './profile-page/profile-projects/profile-project/profile-project.component';
+import { ProfileSkillCardComponent } from './profile-page/profile-skills/profile-skill-card/profile-skill-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProfileProjectComponent } from './profile-page/profile-projects/profile
     ProfileSkillsComponent,
     SidebarComponent,
     FeedPageComponent,
-    ProfileProjectComponent
+    ProfileProjectComponent,
+    ProfileSkillCardComponent
   ],
   imports: [
     CommonModule,
