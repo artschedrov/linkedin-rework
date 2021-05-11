@@ -2,9 +2,10 @@
 @import '../../../../styles/buttons.scss';
 @import '../../../../styles/_fonts.scss';
 
+@import '../../../../styles/_mixins.scss';
+
 .profile-info {
-  font-family: Gotham Pro Regular;
-  background: $block-color;
+  @include blockMainStyle;
   &__container {}
   &__img {
     width: 100%;

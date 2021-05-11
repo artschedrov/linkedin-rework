@@ -18,9 +18,9 @@ import { FooterComponent } from '../footer/footer.component';
 import { AuthService } from './shared/services/auth.service';
 import { SharedModule } from '../shared/shared.module';
 import { AuthGuard } from './shared/services/auth.guard';
-import { ErrorPageComponent } from '../error-page/error-page.component';
 import { ProfileProjectComponent } from './profile-page/profile-projects/profile-project/profile-project.component';
 import { ProfileSkillCardComponent } from './profile-page/profile-skills/profile-skill-card/profile-skill-card.component';
+import { ProfileExperienceCardComponent } from './profile-page/profile-experience/profile-experience-card/profile-experience-card.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { ProfileSkillCardComponent } from './profile-page/profile-skills/profile
     SidebarComponent,
     FeedPageComponent,
     ProfileProjectComponent,
-    ProfileSkillCardComponent
+    ProfileSkillCardComponent,
+    ProfileExperienceCardComponent
   ],
   imports: [
     CommonModule,

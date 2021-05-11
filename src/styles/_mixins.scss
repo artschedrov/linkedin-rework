@@ -1,0 +1,26 @@
+@import './_variables.scss';
+
+@mixin blockMainStyle {
+  background:#fff;
+  font-family: Gotham Pro Regular;
+  border-radius: 4px;
+}
+
+@mixin blockTitleStyle {
+  font-size: $text-size-big;
+  line-height: 17px;
+  font-weight: bold;
+}
+
+@mixin blockTextStyle {
+  font-size: $text-size-md;
+  line-height: 150%;
+}
+
+@mixin blockMoreBtnStyle {
+  text-decoration: none;
+  color: #0275B1;
+  text-transform: uppercase;
+  line-height: 11px;
+  font-size: $text-size-small;
+}

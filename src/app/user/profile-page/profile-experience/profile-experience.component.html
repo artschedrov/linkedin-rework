@@ -1,4 +1,16 @@
-<div>
-  <p>profile-experience works!</p>
+<div class="profile-experience" *ngIf="experiences$ | async as experiences">
+  <div class="profile-experience__container">
+    <div class="profile-experience__title-wrapper">
+      <h3 class="profile-experience">Experience</h3>
+    </div>
+    <div class="profile-experience__list">
+      <app-profile-experience-card
+      class="profile-experience__item"
+      *ngFor="let experience of experiences"
+      [experience]="experience"
+      >
+      </app-profile-experience-card>
+    </div>
+  </div>  
 </div>
 

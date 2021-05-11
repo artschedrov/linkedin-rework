@@ -37,3 +37,12 @@ export interface ProfileSkills {
     pic: any
   }  
 }
+
+export interface ProfileExperience {
+  title: string,
+  description: string,
+  type: string,
+  startDate: string,
+  endDate: string,
+  pic: any
+}

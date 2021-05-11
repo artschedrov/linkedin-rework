@@ -7,9 +7,9 @@ import { ProfileSkills } from 'src/app/user/shared/services/profile.interface';
   styleUrls: ['./profile-skill-card.component.scss']
 })
 export class ProfileSkillCardComponent implements OnInit {
-  endoresments: any
   @Input()
   skill!: ProfileSkills;
+  endoresments: any;
 
   constructor() { }
 

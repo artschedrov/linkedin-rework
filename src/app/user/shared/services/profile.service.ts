@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Profile, ProfileProject, ProfileSkills} from './profile.interface';
+import {Profile, ProfileExperience, ProfileProject, ProfileSkills} from './profile.interface';
 import {environment} from '../../../../environments/environment';
 import {map} from 'rxjs/operators';
 
@@ -38,6 +38,19 @@ export class ProfileService {
 
   getProfileSkills(): Observable<ProfileSkills[]> {
     return this.http.get(`${environment.fireBaseUrl}/skills.json`)
+    .pipe(
+      map((response: {[key: string]: any}) => {
+      return Object
+      .keys(response)
+      .map(key => ({
+        ...response[key],
+        id:key
+      }));
+    }));
+  }
+
+  getProfileExperience(): Observable<ProfileExperience[]> {
+    return this.http.get(`${environment.fireBaseUrl}/experience.json`)
     .pipe(
       map((response: {[key: string]: any}) => {
       return Object

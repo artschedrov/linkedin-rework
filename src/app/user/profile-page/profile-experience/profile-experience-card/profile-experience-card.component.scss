@@ -1,0 +1,32 @@
+@import '../../../../../styles/_variables.scss';
+@import '../../../../../styles/_fonts.scss';
+
+.profile-experience-card {
+  display: flex;
+  align-items: flex-start;
+  font-family: Gotham Pro Regular;
+  cursor: pointer;
+  margin-top: 10px;
+  &__container {
+    display: flex;
+  }
+  &__img-wrapper {
+    width: 54px;
+    height: 54px;
+    margin-right: 16px;
+    margin-top: 20px;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  &__title {
+    font-size: $text-size-md;
+    line-height: 150%;
+    font-weight: bold;
+  }
+  &__description-wrapper {
+    font-size: $text-size-very-sm;
+    line-height: 150%;
+  }
+}

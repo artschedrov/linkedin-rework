@@ -1,9 +1,10 @@
 @import '../../../../styles/_variables.scss';
 @import '../../../../styles/_fonts.scss';
 
+@import '../../../../styles/_mixins.scss';
+
 .profile-skills {
-  background:#fff;
-  font-family: Gotham Pro Regular;
+  @include blockMainStyle;
   margin-top: 20px;
   &__container {
     padding: 30px 30px;
@@ -11,9 +12,8 @@
     flex-direction: column;
   }
   &__title {
-    font-size: $text-size-big;
+    @include blockTitleStyle;
     line-height: 17px;
-    font-weight: bold;
     span {
       color: #747474;
     }
@@ -23,6 +23,9 @@
   }
   &__skills-item {
     cursor: pointer;
+    &:nth-child(n+4) {
+      display: none;
+    }
   }
   &__skills-item + &__skills-item {
     padding-left: 20px;
@@ -31,10 +34,6 @@
     margin-top: 25px;
   }
   &__link {
-    text-decoration: none;
-    color: #0275B1;
-    text-transform: uppercase;
-    line-height: 11px;
-    font-size: $text-size-small;
+    @include blockMoreBtnStyle;
   }
 }
