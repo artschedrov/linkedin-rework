@@ -1,4 +1,187 @@
+@import './../../styles/_variables.scss';
+@import './../../styles/_fonts.scss';
+@import './../../styles/buttons.scss';
+
 .footer {
-  background: #F7F9FB;
-  height: 215px;
+  background: $fone-color;
+  border-top: 1px solid #E7E7E7;
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 30px 110px;
+  }
+  &__logo {
+    flex: 1 2 10%;
+  }
+  &__menu {
+    font-family: Gotham Pro;
+    &__title {
+      margin: 0;
+      font-size: $text-size-small;
+      line-height: 11px;
+    }
+  }
+  &__menu-wrapper {
+    display: flex;
+    // margin-left: 70px;
+    flex: 2 1 80%;
+
+  }
+  &__menu-nav-wrapper {
+    display: flex;
+  }
+  &__menu-nav {
+    &__list {
+      font-family: Gotham Pro;
+      list-style: none;
+      padding: 0;
+    }  
+    &__list-container + &__list-container{
+      margin-left: 35px;
+    }
+    &__item {
+      padding: 5px;
+    }
+    &__link {
+      text-decoration: none;
+      line-height: 11px;
+      font-size: $text-size-small;
+      color: $text-color-primary !important;
+    }
+  }
+  &__menu-btn {
+    margin-left: 65px;
+    &__buttons {
+      margin-top: 30px;
+    }
+    &__button {
+      margin-bottom: 10px;
+    }
+  }
+  &__menu-lang {
+    margin-left: 60px;
+    &__container {
+      margin-top: 30px;
+      max-width: 300px;
+    }
+    &__select-wrapper {
+      position: relative;
+      user-select: none;
+      width: 100%;
+    }
+    &__select {
+      display: flex;
+      flex-direction: column;
+      border: solid 2px $block-color;
+      width: 270px;
+      &__trigger {
+        font-family: Gotham Pro;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 22px;
+        font-size: $text-size-small;
+        text-transform: uppercase;
+        color: #3b3b3b;
+        height: 32px;
+        line-height: 11px;
+        background: #ffffff;
+        cursor: pointer;
+      }
+    }
+    &__options {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    &__select.open &__options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    &__option {
+      font-family: Gotham Pro;
+      position: relative;
+      display: block;
+      padding: 5px 22px 5px 22px;
+      font-size: $text-size-small;
+      text-transform: uppercase;
+      color: #3b3b3b;
+      line-height: 11px;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        cursor: pointer;
+        background-color: #b2b2b2;
+      }
+    }
+    &__option .selected {
+      color: #ffffff;
+      background-color: #0275B1;
+    }
+  }
+}
+
+.arrow {
+  position: relative;
+  height: 7px;
+  width: 7px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  //left: -5px;
+  transform: rotate(135deg);
+  background-color: #0275B1;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-135deg);
+  background-color: #0275B1;
+}
+
+.open .arrow::before {
+  //left: -5px;
+  transform: rotate(-135deg);
+}
+
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(135deg);
+}
+
+.footer-button {
+  display: flex;
+  align-items:flex-end;
+  padding: 10px 10px !important;
+  &__img1 {
+    padding-left: 50px;
+  }
+  &__img2 {
+    padding-left: 68px;
+  }
+  &--blue {
+    background: $fone-color;
+  }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProfileEducation } from '../../shared/services/profile.interface';
+import { ProfileService } from '../../shared/services/profile.service';
 
 @Component({
   selector: 'app-profile-education',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-education.component.scss']
 })
 export class ProfileEducationComponent implements OnInit {
+  
+  educations$!: Observable<ProfileEducation[]>;
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
+    this.educations$ = this.profileService.getProfileEducation()
   }
 
 }

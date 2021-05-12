@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Profile, ProfileExperience, ProfileProject, ProfileSkills} from './profile.interface';
+import {Profile, ProfileEducation, ProfileExperience, ProfileProject, ProfileSidebarRecomended, ProfileSkills} from './profile.interface';
 import {environment} from '../../../../environments/environment';
 import {map} from 'rxjs/operators';
 
@@ -51,6 +51,32 @@ export class ProfileService {
 
   getProfileExperience(): Observable<ProfileExperience[]> {
     return this.http.get(`${environment.fireBaseUrl}/experience.json`)
+    .pipe(
+      map((response: {[key: string]: any}) => {
+      return Object
+      .keys(response)
+      .map(key => ({
+        ...response[key],
+        id:key
+      }));
+    }));
+  }
+
+  getProfileEducation(): Observable<ProfileEducation[]> {
+    return this.http.get(`${environment.fireBaseUrl}/education.json`)
+    .pipe(
+      map((response: {[key: string]: any}) => {
+      return Object
+      .keys(response)
+      .map(key => ({
+        ...response[key],
+        id:key
+      }));
+    }));
+  }
+
+  getProfileSidebarRecomended(): Observable<ProfileSidebarRecomended[]> {
+    return this.http.get(`${environment.fireBaseUrl}/profileSidebar/0/recomended.json`)
     .pipe(
       map((response: {[key: string]: any}) => {
       return Object

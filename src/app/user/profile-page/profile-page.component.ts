@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Profile, ProfileProject } from '../shared/services/profile.interface';
+import { Profile, ProfileProject, ProfileSidebarRecomended } from '../shared/services/profile.interface';
 import { ProfileService } from '../shared/services/profile.service';
 
 @Component({
@@ -10,7 +10,10 @@ import { ProfileService } from '../shared/services/profile.service';
 })
 
 export class ProfilePageComponent implements OnInit {
+
   profiles$!: Observable<Profile[]>;
+  recomendates$!: Observable<ProfileSidebarRecomended[]>
+  
   constructor(private profilesService: ProfileService) { }
 
   changeTab($event: any, tabName: string) {
@@ -36,5 +39,7 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.profiles$ = this.profilesService.getProfileInfo();
+    this.recomendates$ = this.profilesService.getProfileSidebarRecomended();
+
   }
 }

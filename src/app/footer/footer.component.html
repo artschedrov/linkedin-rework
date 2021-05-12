@@ -1,3 +1,72 @@
 <div class="footer">
-  <p>footer works!</p>
+  <div class="footer__container">
+    <div class="footer__logo">
+      <a [routerLink]="['/user', 'profile']" >
+        <img src="../../assets/logo/LogoFooter.svg" alt="">
+      </a>
+    </div>
+    <div class="footer__menu-wrapper">
+      <div class="footer__menu-nav">
+        <h3 class="footer__menu__title">Navigation</h3>
+        <div class="footer__menu-nav-wrapper">
+          <div class="footer__menu-nav__list-container">
+            <ul class="footer__menu-nav__list">
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">About</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Careers</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="">Advertising</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Small Business</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu-nav__list-container">
+            <ul class="footer__menu-nav__list">
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Talent Solutions</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Marketing Solutions</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Sales Solutions</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Safery Center</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu-nav__list-container">
+            <ul class="footer__menu-nav__list">
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Community Guidelines</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Privacy & Terms</a></li>
+              <li class="footer__menu-nav__item"><a class="footer__menu-nav__link" href="#">Mobile App</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__menu-btn">
+        <h3 class="footer__menu__title">Fast access</h3>
+        <div class="footer__menu-btn__buttons">
+          <div class="footer__menu-btn__button">
+            <button class="button footer-button" href="#">
+              Questions? 
+              <img class="footer-button__img1" src="../../assets/icons/help-circle.svg" alt="">
+            </button>
+          </div>
+          <div class="footer__menu-btn__button">
+            <button class="button button--white footer-button footer-button--blue" href="#">
+              Settings 
+              <img class="footer-button__img2" src="../../assets/icons/settings.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__menu-lang">
+        <h3 class="footer__menu__title">Language</h3>
+        <div class="footer__menu-lang__container">
+          <div class="footer__menu-lang__select-wrapper" (click)="openDropdown()">
+              <div class="footer__menu-lang__select">
+                  <div class="footer__menu-lang__select__trigger"><span>English</span>
+                      <div class="arrow"></div>
+                  </div>
+                  <div class="footer__menu-lang__options">
+                      <span class="footer__menu-lang__option selected" data-value="English" (click)="changeOption()">English</span>
+                      <span class="footer__menu-lang__option" data-value="Russian" (click)="changeOption()">Russian</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

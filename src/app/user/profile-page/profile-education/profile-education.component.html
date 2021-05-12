@@ -1,3 +1,13 @@
-<div>
-  <p>profile-education works!</p>
+<div class="profile-education" *ngIf="educations$ | async as educations">
+  <div class="profile-education__container">
+    <div class="profile-education__title-wrapper">
+      <h3 class="profile-education__title">Education</h3>
+    </div>
+    <div class="profile-education__list">
+      <app-profile-education-card
+      *ngFor="let education of educations"
+      [education]="education"
+      ></app-profile-education-card>
+    </div>
+  </div>
 </div>

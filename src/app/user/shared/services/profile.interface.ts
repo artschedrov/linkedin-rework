@@ -46,3 +46,18 @@ export interface ProfileExperience {
   endDate: string,
   pic: any
 }
+
+export interface ProfileEducation {
+  title: string,
+  description: string,
+  extra: string,
+  startDate: string,
+  endDate: string,
+  pic: any
+}
+
+export interface ProfileSidebarRecomended {
+  name: string,
+  pic: any,
+  views: string
+}

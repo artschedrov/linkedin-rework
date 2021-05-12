@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { Profile } from '../../shared/services/profile.interface';
+import { SidebarService } from '../../shared/services/sidebar.service';
 
 @Component({
   selector: 'app-profile-about',

@@ -1,8 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Profile, ProfileViews } from '../user/shared/services/profile.interface';
-import { ProfileService } from '../user/shared/services/profile.service';
-
 
 @Component({
   selector: 'app-header',

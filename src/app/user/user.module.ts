@@ -21,6 +21,9 @@ import { AuthGuard } from './shared/services/auth.guard';
 import { ProfileProjectComponent } from './profile-page/profile-projects/profile-project/profile-project.component';
 import { ProfileSkillCardComponent } from './profile-page/profile-skills/profile-skill-card/profile-skill-card.component';
 import { ProfileExperienceCardComponent } from './profile-page/profile-experience/profile-experience-card/profile-experience-card.component';
+import { ProfileEducationCardComponent } from './profile-page/profile-education/profile-education-card/profile-education-card.component';
+import { ProfileSidebarComponent } from './sidebar/profile-sidebar/profile-sidebar.component';
+import { RefDirective } from './sidebar/ref.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { ProfileExperienceCardComponent } from './profile-page/profile-experienc
     FeedPageComponent,
     ProfileProjectComponent,
     ProfileSkillCardComponent,
-    ProfileExperienceCardComponent
+    ProfileExperienceCardComponent,
+    ProfileEducationCardComponent,
+    ProfileSidebarComponent,
+    RefDirective
   ],
   imports: [
     CommonModule,
@@ -60,6 +66,6 @@ import { ProfileExperienceCardComponent } from './profile-page/profile-experienc
   exports: [
     RouterModule
   ],
-  providers: [AuthService, AuthGuard]
+  providers: [AuthService, AuthGuard],
 })
 export class UserModule { }
