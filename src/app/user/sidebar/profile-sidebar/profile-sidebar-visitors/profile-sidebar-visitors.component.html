@@ -1,0 +1,17 @@
+<div class="profile-sidebar-visitors">
+  <div class="profile-sidebar-visitors__container">
+    <div class="profile-sidebar-visitors__title-container">
+      <div>
+        <h3 class="profile-sidebar-visitors__title">Visitors</h3>
+      </div>
+      <div>
+        <a class="profile-sidebar-visitors__link" href="">view all</a>
+      </div>
+    </div>
+    <div class="profile-sidebar-stats__stats-container" *ngIf="visitors$ | async as visitors">
+      <app-visitor-card
+      *ngFor="let visitor of visitors"
+      [visitor]="visitor"
+      ></app-visitor-card>
+    </div>
+</div>

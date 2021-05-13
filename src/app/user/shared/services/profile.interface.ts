@@ -56,8 +56,22 @@ export interface ProfileEducation {
   pic: any
 }
 
+export interface ProfileSidebarViews {
+  views: {
+    postViews: string,
+    searchApearance: string,
+    today: string
+  }
+}
+
 export interface ProfileSidebarRecomended {
   name: string,
   pic: any,
   views: string
+}
+
+export interface ProfileSidebarVisitors {
+  description: string,
+  name: string,
+  pic: any
 }

@@ -1,0 +1,22 @@
+@import '../../../../../../styles/variables'; 
+
+.visitor-card {
+  padding: 15px 0;
+  &__container {
+    display: flex;
+  }
+  &__img-wrapper {
+    width: 52px;
+    height: 52px;
+  }
+  &__text-wrapper {
+    padding-left: 15px;
+    h3 {
+      font-size: $text-size-md;
+      line-height: 13px;
+    }
+    p {
+      font-size: $text-size-small;
+    }
+  }
+}

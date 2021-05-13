@@ -9,10 +9,6 @@
   &__wrapper {
     flex: 2 1 70%;
   }
-  &__sidebar {
-    flex: 2 1 30%;
-    margin-left: 40px;
-  }
   &__navigation {
     margin-top: 35px;
     border-bottom: solid #E7E7E7 1px;
@@ -47,4 +43,9 @@
       display: block;
     }
   }
+}
+
+.profile-sidebar {
+  margin-left: 40px;
+  flex: 2 1 25%;
 }

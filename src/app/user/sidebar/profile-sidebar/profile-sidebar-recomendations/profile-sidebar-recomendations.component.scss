@@ -1,0 +1,25 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+.profile-sidebar-recomendations {
+  @include blockMainStyle;
+  margin-top: 20px;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+    justify-content: flex-start;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+}

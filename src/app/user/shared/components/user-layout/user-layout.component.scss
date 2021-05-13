@@ -4,12 +4,11 @@
 main {
   background: $fone-color;
   padding-top: 80px;
+  display: flex;
 }
 
 .container {
-  display: flex;
-  // padding: 40px 5px 10px 105px;
-  //max-width: 100%;
   margin: 0 auto;
   padding: 40px 110px;
+  flex: 1;
 }

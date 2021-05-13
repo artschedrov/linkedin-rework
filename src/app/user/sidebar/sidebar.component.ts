@@ -9,6 +9,7 @@ import { RefDirective } from './ref.directive';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  
   @ViewChild(RefDirective, { static: true }) refDir!: RefDirective;
   constructor(public resolver: ComponentFactoryResolver, private router: Router) { }
     

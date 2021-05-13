@@ -1,7 +1,17 @@
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_fonts.scss';
 
-div {
-  height: 600px;
-  background: $block-color;
+.feed {
+  &__container {
+    display: flex;
+    
+  }
+  &__wrapper {
+    flex: 2 1 70%;
+    //min-width: 850px;
+  }
+  &__sidebar {
+    margin-left: 40px;
+    flex: 2 1 25%;
+  }
 }

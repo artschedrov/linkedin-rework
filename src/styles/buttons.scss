@@ -16,6 +16,9 @@
 	min-width: 14.5em;
 	cursor: pointer;
 	z-index: 1;
+  &:hover {
+    opacity: 0.3;
+  }
   &--white {
     background: #fff;
     color: #0275B1;

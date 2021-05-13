@@ -1,0 +1,19 @@
+<div class="profile-sidebar-recomendations">
+  <div class="profile-sidebar-recomendations__container">
+    <div class="profile-sidebar-recomendations__title-container">
+      <div>
+        <h3 class="profile-sidebar-recomendations__title">You may like these courses</h3>
+      </div>
+    </div>
+    <div *ngIf="recomendations$ | async as recomendations">
+      <app-recomendation-card
+      *ngFor="let recomendation of recomendations"
+      [recomendation]="recomendation"
+      >
+      </app-recomendation-card>
+    </div>
+    <div>
+      <a class="profile-sidebar-recomendations__link" href="#">See all recomendations</a>
+    </div>
+  </div>
+</div>

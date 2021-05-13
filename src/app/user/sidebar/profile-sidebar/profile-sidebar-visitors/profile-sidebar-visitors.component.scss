@@ -1,0 +1,27 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+
+.profile-sidebar-visitors {
+  @include blockMainStyle;
+  margin-top: 20px;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+    margin-left: 27px;
+  }
+}
+

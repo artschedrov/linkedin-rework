@@ -24,6 +24,16 @@ import { ProfileExperienceCardComponent } from './profile-page/profile-experienc
 import { ProfileEducationCardComponent } from './profile-page/profile-education/profile-education-card/profile-education-card.component';
 import { ProfileSidebarComponent } from './sidebar/profile-sidebar/profile-sidebar.component';
 import { RefDirective } from './sidebar/ref.directive';
+import { ProfileSidebarVisitorsComponent } from './sidebar/profile-sidebar/profile-sidebar-visitors/profile-sidebar-visitors.component';
+import { ProfileSidebarStatsComponent } from './sidebar/profile-sidebar/profile-sidebar-stats/profile-sidebar-stats.component';
+import { ProfileSidebarRecomendationsComponent } from './sidebar/profile-sidebar/profile-sidebar-recomendations/profile-sidebar-recomendations.component';
+import { VisitorCardComponent } from './sidebar/profile-sidebar/profile-sidebar-visitors/visitor-card/visitor-card.component';
+import { RecomendationCardComponent } from './sidebar/profile-sidebar/profile-sidebar-recomendations/recomendation-card/recomendation-card.component';
+import { FeedCreatePostComponent } from './feed-page/feed-create-post/feed-create-post.component';
+import { FeedLastLikedPostsComponent } from './feed-page/feed-last-liked-posts/feed-last-liked-posts.component';
+import { FeedTrendingCommentPostsComponent } from './feed-page/feed-trending-comment-posts/feed-trending-comment-posts.component';
+import { FeedTrendingRatedPostsComponent } from './feed-page/feed-trending-rated-posts/feed-trending-rated-posts.component';
+import { FeedTrendingFirstPostsComponent } from './feed-page/feed-trending-first-posts/feed-trending-first-posts.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +55,17 @@ import { RefDirective } from './sidebar/ref.directive';
     ProfileExperienceCardComponent,
     ProfileEducationCardComponent,
     ProfileSidebarComponent,
-    RefDirective
+    RefDirective,
+    ProfileSidebarVisitorsComponent,
+    ProfileSidebarStatsComponent,
+    ProfileSidebarRecomendationsComponent,
+    VisitorCardComponent,
+    RecomendationCardComponent,
+    FeedCreatePostComponent,
+    FeedLastLikedPostsComponent,
+    FeedTrendingCommentPostsComponent,
+    FeedTrendingRatedPostsComponent,
+    FeedTrendingFirstPostsComponent
   ],
   imports: [
     CommonModule,

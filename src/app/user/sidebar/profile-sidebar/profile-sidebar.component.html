@@ -1,1 +1,12 @@
-<p>profile-sidebar</p>
+<div *ngIf="stats$ | async as stats">
+  <app-profile-sidebar-stats
+    *ngFor="let stat of stats"
+    [stat]="stat"
+  >
+
+  </app-profile-sidebar-stats>
+</div>
+<div>
+  <app-profile-sidebar-visitors></app-profile-sidebar-visitors>
+</div>
+<app-profile-sidebar-recomendations></app-profile-sidebar-recomendations>

@@ -1,4 +1,16 @@
-<p>feed-page works!</p>
-<div>
-  <app-sidebar></app-sidebar>
+<div class="feed__container">
+  <div class="feed__wrapper">
+    <app-feed-create-post></app-feed-create-post>
+    <div class="feed__posts-filter">Sort by: trending</div>
+    <div class="feed__posts-content__trending">
+      <app-feed-last-liked-posts></app-feed-last-liked-posts>
+      <app-feed-trending-comment-posts></app-feed-trending-comment-posts>
+      <app-feed-trending-rated-posts></app-feed-trending-rated-posts>
+      <app-feed-trending-first-posts></app-feed-trending-first-posts>
+    </div>
+  </div>
+  <div class="feed__sidebar">
+    <p>Sidebar</p>
+    <app-sidebar></app-sidebar>
+  </div>
 </div>

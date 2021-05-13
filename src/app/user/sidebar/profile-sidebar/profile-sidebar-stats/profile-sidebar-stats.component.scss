@@ -1,0 +1,37 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+.profile-sidebar-stats {
+  @include blockMainStyle;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+    margin-left: 27px;
+    text-decoration: underline;
+  }
+  &__stats-wrapper {
+    padding-top: 20px;
+  }
+  &__stats-count {
+    font-size: 52px;
+    color: #0275B1;
+  }
+  &__stats-desc {
+    font-size: $text-size-md;
+    line-height: 150%;
+  }
+
+}
