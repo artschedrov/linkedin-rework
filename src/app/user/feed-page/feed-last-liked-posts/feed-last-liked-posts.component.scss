@@ -1,0 +1,18 @@
+@import '../../../../styles/_variables.scss';
+@import '../../../../styles/buttons.scss';
+@import '../../../../styles/_fonts.scss';
+
+@import '../../../../styles/_mixins.scss';
+
+.feed-last-liked-post {
+  @include blockMainStyle;
+  &__container {
+    padding: 25px 30px;
+  }
+  &__likes {
+    @include blockTitleStyle;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F4F4F4;
+  }
+}

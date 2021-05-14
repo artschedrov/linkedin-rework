@@ -8,10 +8,115 @@
   }
   &__wrapper {
     flex: 2 1 70%;
-    //min-width: 850px;
+  }
+  &__posts-filter {
+    font-family: Gotham Pro;
+    font-size: $text-size-md;
+    line-height: 11px;
+    text-transform: uppercase;
+    margin: 35px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-right: 2px;
+    }
+
+  }
+  &__menu {
+    //margin-left: 60px;
+    &__select-wrapper {
+      position: relative;
+      user-select: none;
+      width: 100%;
+    }
+    &__select {
+      display: flex;
+      flex-direction: column;
+      &__trigger {
+        font-family: Gotham Pro;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: $text-size-md;
+        text-transform: uppercase;
+        color: #0275B1;
+        height: 32px;
+        line-height: 11px;
+        cursor: pointer;
+      }
+    }
+    &__options {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    &__select.open &__options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    &__option {
+      font-family: Gotham Pro;
+      position: relative;
+      display: block;
+      padding: 5px 22px 5px 22px;
+      font-size: $text-size-md;
+      text-transform: uppercase;
+      color: #3b3b3b;
+      line-height: 11px;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        cursor: pointer;
+        background-color: #b2b2b2;
+      }
+    }
+    &__option .selected {
+      color: #ffffff;
+      background-color: #0275B1;
+    }
   }
   &__sidebar {
     margin-left: 40px;
     flex: 2 1 25%;
   }
+}
+
+.arrow {
+  position: relative;
+  height: 7px;
+  width: 7px;
+  margin-left: 5px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  //left: -5px;
+  transform: rotate(135deg);
+  background-color: #0275B1;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-135deg);
+  background-color: #0275B1;
 }

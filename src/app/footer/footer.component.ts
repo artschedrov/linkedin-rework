@@ -16,12 +16,10 @@ export class FooterComponent implements OnInit {
 
   changeOption() {
     const options = document.querySelectorAll('.footer__menu-lang__option');
-    //const selected = document.querySelector('.footer__menu-lang__option.selected');
     for (let i = 0; i < options.length; i++) {
       if(!options[i].classList.contains('selected')) {
         options[i].parentNode!.querySelector('.footer__menu-lang__option.selected')!.classList.remove('selected');
         options[i].classList.add('selected');
-        //options[i].closest('.footer__menu-lang__select')!.querySelector('.footer__menu-lang__select__trigger span')!.textContent = options[i].textContent;
       }
     }
 

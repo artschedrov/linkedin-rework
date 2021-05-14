@@ -34,6 +34,7 @@ import { FeedLastLikedPostsComponent } from './feed-page/feed-last-liked-posts/f
 import { FeedTrendingCommentPostsComponent } from './feed-page/feed-trending-comment-posts/feed-trending-comment-posts.component';
 import { FeedTrendingRatedPostsComponent } from './feed-page/feed-trending-rated-posts/feed-trending-rated-posts.component';
 import { FeedTrendingFirstPostsComponent } from './feed-page/feed-trending-first-posts/feed-trending-first-posts.component';
+import { PostCardComponent } from './feed-page/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { FeedTrendingFirstPostsComponent } from './feed-page/feed-trending-first
     FeedLastLikedPostsComponent,
     FeedTrendingCommentPostsComponent,
     FeedTrendingRatedPostsComponent,
-    FeedTrendingFirstPostsComponent
+    FeedTrendingFirstPostsComponent,
+    PostCardComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,20 @@
 <div class="feed__container">
   <div class="feed__wrapper">
     <app-feed-create-post></app-feed-create-post>
-    <div class="feed__posts-filter">Sort by: trending</div>
+    <div class="feed__posts-filter">
+      <p>Sort by:<br /></p>
+      <div class="feed__posts__select-wrapper">
+        <div class="feed__menu__select">
+            <div class="feed__menu__select__trigger"><span>Trending</span>
+                <div class="arrow"></div>
+            </div>
+            <div class="feed__menu__options">
+                <span class="feed__menu__option selected" data-value="Trending">Trending</span>
+                <span class="feed__menu__option" data-value="Data">Date</span>
+            </div>
+        </div>
+    </div>
+    </div>
     <div class="feed__posts-content__trending">
       <app-feed-last-liked-posts></app-feed-last-liked-posts>
       <app-feed-trending-comment-posts></app-feed-trending-comment-posts>
