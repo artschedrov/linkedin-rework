@@ -1,1 +1,57 @@
-<p>post-card works!</p>
+<div class="post-card">
+  <div class="post-card__header">
+    <ng-template postRef></ng-template>
+    <div class="post-card__footer__shared">
+      <button class="post-card__button-more">
+        <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+      </button>
+    </div>
+  </div>
+  <div class="post-card__container">
+    <div class="post-card__user-info">
+      <div class="post-card__avatar-container">
+        <img [src]="post.avatar" alt="">
+      </div>
+      <div class="post-card__user-description">
+        <p class="post-card__user-name">{{post.author}}</p>
+        <p class="post-card__user-profession">{{post.profession}}</p>
+      </div>
+    </div>
+    <div class="post-card__content">
+      <p class="post-card__content__text">{{post.description}}</p>
+      <img [src]="post.attachPic" [ngStyle]="{'display':post.attachPic === undefined ? 'none' : 'block'}" alt="">
+      <div class="post-card__attach-file" [ngStyle]="{'display':post.attachFile === undefined ? 'none' : 'block'}">
+        <p>{{post.attachFile}}</p>
+      </div>
+    </div>  
+  </div>
+  <div class="post-card__wrapper-link" [ngStyle]="{'display':post.description.length < 100 ? 'none' : 'block'}">
+    <a class="post-card__link" href="#">read more</a>
+  </div>
+  <div class="post-card__footer">
+    <div class="post-card__footer__post-menu">
+      <div class="post-card__footer__menu-item">
+        <div>
+          <a href="#">
+            <img src="../../../../assets/icons/thumbs-up.svg" alt="">
+          </a>
+        </div>
+        <p>{{post.likesCount}}</p>
+      </div>
+      <div class="post-card__footer__menu-item">
+        <div>
+          <a href="#">
+            <img src="../../../../assets/icons/message-circle.svg" alt="">
+          </a>
+        </div>
+        <p>{{post.commentCount}}</p>
+      </div>
+    </div>
+    <div class="post-card__footer__shared">
+      <button class="post-card__button-shared">
+        <img src="../../../../assets/icons/share.svg" alt="">
+        <p>Share</p>
+      </button>
+    </div>
+  </div>
+</div>

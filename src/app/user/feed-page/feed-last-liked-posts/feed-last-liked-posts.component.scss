@@ -6,9 +6,7 @@
 
 .feed-last-liked-post {
   @include blockMainStyle;
-  &__container {
-    padding: 25px 30px;
-  }
+  margin-bottom: 20px;
   &__likes {
     @include blockTitleStyle;
     margin: 0;

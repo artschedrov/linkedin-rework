@@ -1,1 +1,11 @@
-<p>feed-trending-comment-posts works!</p>
+<div class="feed-trend-comment-post" *ngIf="newComments$ | async as newComments">
+  <div class="feed-trend-comment-post__container">
+    <div class="feed-trend-comments__post-container">
+      <app-post-card
+      *ngFor="let post of newComments"
+      [post]="post"
+      [parentName]="'app-feed-trending-comment'"
+      ></app-post-card>
+    </div>
+  </div>
+</div>

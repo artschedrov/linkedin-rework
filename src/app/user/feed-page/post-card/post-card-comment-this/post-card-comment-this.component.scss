@@ -1,0 +1,29 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+.post-card-comment {
+  &__container {
+    @include blockTitleStyle;
+    margin: 0;
+    display: flex;
+    font-family: Gotham Pro;
+    a {
+      font-size: $text-size-small;
+      line-height: 150%;
+      font-weight: normal;
+      color: #0275B1;
+      margin: 0;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    span  {
+      font-size: $text-size-small;
+      line-height: 150%;
+      font-weight: normal;
+    }
+  }  
+}

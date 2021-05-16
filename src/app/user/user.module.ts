@@ -35,6 +35,11 @@ import { FeedTrendingCommentPostsComponent } from './feed-page/feed-trending-com
 import { FeedTrendingRatedPostsComponent } from './feed-page/feed-trending-rated-posts/feed-trending-rated-posts.component';
 import { FeedTrendingFirstPostsComponent } from './feed-page/feed-trending-first-posts/feed-trending-first-posts.component';
 import { PostCardComponent } from './feed-page/post-card/post-card.component';
+import { PostCardLikesComponent } from './feed-page/post-card/post-card-likes/post-card-likes.component';
+import { PostCardCommentThisComponent } from './feed-page/post-card/post-card-comment-this/post-card-comment-this.component';
+import { PostCardHighratedPostComponent } from './feed-page/post-card/post-card-highrated-post/post-card-highrated-post.component';
+import { PostCardFirstCommentComponent } from './feed-page/post-card/post-card-first-comment/post-card-first-comment.component';
+import { RefPostDirective } from './feed-page/post-card/refPost.directive';
 
 @NgModule({
   declarations: [
@@ -67,7 +72,12 @@ import { PostCardComponent } from './feed-page/post-card/post-card.component';
     FeedTrendingCommentPostsComponent,
     FeedTrendingRatedPostsComponent,
     FeedTrendingFirstPostsComponent,
-    PostCardComponent
+    PostCardComponent,
+    PostCardLikesComponent,
+    PostCardCommentThisComponent,
+    PostCardHighratedPostComponent,
+    PostCardFirstCommentComponent,
+    RefPostDirective
   ],
   imports: [
     CommonModule,
