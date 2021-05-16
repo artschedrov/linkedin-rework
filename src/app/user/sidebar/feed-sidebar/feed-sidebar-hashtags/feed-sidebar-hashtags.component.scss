@@ -1,0 +1,52 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+
+.feed-sidebar-hashtags {
+  @include blockMainStyle;
+  margin-top: 20px;
+  background: #FCFDFD;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link-container {
+    margin-top: 20px;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+  &__hashtags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    
+  } 
+  &__hashtag-container {
+    background: #E9F0F8;
+    border-radius: 4px;
+    min-width: 2em;
+    margin: 10px;
+    flex-grow: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+  &__hashtag-name {
+    padding: 7px 15px;
+    margin: 0;
+    font-size: $text-size-small;
+  }
+}

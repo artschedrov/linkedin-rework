@@ -6,6 +6,7 @@
 .profile-sidebar-recomendations {
   @include blockMainStyle;
   margin-top: 20px;
+  background: #FCFDFD;
   &__container {
     @include sidebarContainer;
   }

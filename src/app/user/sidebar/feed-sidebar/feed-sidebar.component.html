@@ -1,0 +1,15 @@
+<div *ngIf="profiles$ | async as profiles">
+  <app-feed-sidebar-userinfo
+  *ngFor="let profile of profiles"
+  [profile]="profile"
+  ></app-feed-sidebar-userinfo>
+</div>
+<div>
+  <app-feed-sidebar-mygroups></app-feed-sidebar-mygroups>
+</div>
+<div>
+  <app-feed-sidebar-hashtags></app-feed-sidebar-hashtags>
+</div>
+<div>
+  <app-feed-sidebar-articles></app-feed-sidebar-articles>
+</div>

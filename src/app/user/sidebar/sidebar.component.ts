@@ -1,5 +1,6 @@
 import { Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
+import { FeedSidebarComponent } from './feed-sidebar/feed-sidebar.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
 import { RefDirective } from './ref.directive';
 
@@ -14,12 +15,16 @@ export class SidebarComponent implements OnInit {
   constructor(public resolver: ComponentFactoryResolver, private router: Router) { }
     
   ngOnInit() {
-    console.log(this.router.url);
     const profileSidebarFactory = this.resolver.resolveComponentFactory(ProfileSidebarComponent);
+    const feedSidebarFactory = this.resolver.resolveComponentFactory(FeedSidebarComponent);
     
     if (this.router.url === '/user/profile') {
       this.refDir.containerRef.clear();
       this.refDir.containerRef.createComponent(profileSidebarFactory);
+    }
+    if (this.router.url === '/user/feed') {
+      this.refDir.containerRef.clear();
+      this.refDir.containerRef.createComponent(feedSidebarFactory);
     }
   }
 }

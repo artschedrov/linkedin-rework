@@ -6,6 +6,7 @@
 
 .feed-trend-comment-post {
   @include blockMainStyle;
+  margin-bottom: 20px;
   &__likes {
     @include blockTitleStyle;
     margin: 0;

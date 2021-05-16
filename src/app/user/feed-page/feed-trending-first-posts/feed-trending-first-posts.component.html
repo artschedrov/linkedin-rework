@@ -1,1 +1,11 @@
-<p>feed-trending-first-posts works!</p>
+<div class="feed-trending-first-post" *ngIf="firstPosts$ | async as firstPosts">
+  <div class="feed-trending-first-post__container">
+    <div class="feed-trending-first__post-container">
+      <app-post-card
+      *ngFor="let post of firstPosts"
+      [post]="post"
+      [parentName]="'app-feed-trending-first-posts'"
+      ></app-post-card>
+    </div>
+  </div>
+</div>

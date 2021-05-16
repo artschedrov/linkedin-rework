@@ -38,5 +38,6 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.profiles$ = this.profilesService.getProfileInfo();
+    
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedService } from 'src/app/user/shared/services/feed.service';
 
 @Component({
   selector: 'app-post-card-highrated-post',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCardHighratedPostComponent implements OnInit {
 
-  constructor() { }
+  attachFiles: any
+  post: any;
+
+  constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
+    this.post = this.feedService.getScopePost();
   }
 
 }

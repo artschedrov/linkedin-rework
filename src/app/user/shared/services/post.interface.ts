@@ -5,7 +5,11 @@ export interface Post {
   description: string,
   attachPic?: any,
   attachVideo?: any,
-  attachFile?: any,
+  attachFile?: {
+    name: string,
+    type: any,
+    size: string
+  },
   commentCount: string,
   likesCount: string,
   likers: {

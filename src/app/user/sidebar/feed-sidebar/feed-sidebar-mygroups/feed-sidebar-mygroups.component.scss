@@ -1,0 +1,32 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+
+.feed-sidebar-mygroups {
+  @include blockMainStyle;
+  margin-top: 20px;
+  background: #FCFDFD;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link-container {
+    margin-top: 20px;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+  &__groups {
+    margin-top: 25px;
+  }
+}

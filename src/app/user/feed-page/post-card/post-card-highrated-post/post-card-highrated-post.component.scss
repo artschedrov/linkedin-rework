@@ -1,0 +1,18 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+
+@import '../../../../../styles/mixins';
+
+.post-card-highrated {
+  &__container {
+    @include blockTitleStyle;
+    margin: 0;
+    display: flex;
+    font-family: Gotham Pro;
+    span  {
+      font-size: $text-size-small;
+      line-height: 150%;
+      font-weight: normal;
+    }
+  }  
+}

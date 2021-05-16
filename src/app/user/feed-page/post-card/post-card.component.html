@@ -20,8 +20,23 @@
     <div class="post-card__content">
       <p class="post-card__content__text">{{post.description}}</p>
       <img [src]="post.attachPic" [ngStyle]="{'display':post.attachPic === undefined ? 'none' : 'block'}" alt="">
-      <div class="post-card__attach-file" [ngStyle]="{'display':post.attachFile === undefined ? 'none' : 'block'}">
-        <p>{{post.attachFile}}</p>
+      <div class="post-card__attach-file" [ngStyle]="{'display':post.attachFile === undefined ? 'none' : 'block'}" *ngFor="let file of attachFiles">
+        <div class="post-card__attach-file__container">
+          <div class="post-card__attach-file__wrapper">
+            <div class="post-card__attach-file__icon">
+              <img src="../../../../assets/icons/attachFile.svg" alt="">
+            </div>
+            <div class="post-card__attach-file__info">
+              <p class="post-card__attach-file__info__name">{{file.name}}</p>
+              <p class="post-card__attach-file__info__desc"><span>{{file.type}} file, </span>{{file.size}}</p>
+            </div>
+          </div>
+          <div class="post-card__attach-file__button-container">
+            <button class="post-card__attach-file__button">
+              <img src="../../../../assets/icons/download-cloud.svg" alt="">
+            </button>
+          </div>
+        </div>
       </div>
     </div>  
   </div>

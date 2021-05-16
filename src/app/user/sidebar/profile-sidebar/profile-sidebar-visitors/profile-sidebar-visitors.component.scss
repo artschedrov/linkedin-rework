@@ -7,6 +7,7 @@
 .profile-sidebar-visitors {
   @include blockMainStyle;
   margin-top: 20px;
+  background: #FCFDFD;
   &__container {
     @include sidebarContainer;
   }

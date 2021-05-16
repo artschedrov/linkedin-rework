@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { FeedService } from '../../shared/services/feed.service';
+import { Post } from '../../shared/services/post.interface';
 
 @Component({
   selector: 'app-feed-trending-rated-posts',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedTrendingRatedPostsComponent implements OnInit {
 
-  constructor() { }
+  highRatedPosts$!: Observable<Post[]>;
+
+  constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
+    let path = '/posts/highRated.json';
+    this.highRatedPosts$ = this.feedService.getFeedInfo(path);
   }
-
 }

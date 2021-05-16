@@ -1,0 +1,16 @@
+@import '../../../../styles/_variables.scss';
+@import '../../../../styles/buttons.scss';
+@import '../../../../styles/_fonts.scss';
+
+@import '../../../../styles/_mixins.scss';
+
+.feed-trending-first-post {
+  @include blockMainStyle;
+  margin-bottom: 20px;
+  &__likes {
+    @include blockTitleStyle;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F4F4F4;
+  }
+}

@@ -120,4 +120,54 @@
       opacity: 0.3;
     }
   }
+  &__attach-file {
+    background: #E9F0F8;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+    }
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+    &__info {
+      margin-left: 15px;
+      &__name {
+        font-size: $text-size-md;
+        line-height: 150%;
+        margin: 0;
+        font-weight: bold;
+      }
+      &__desc {
+        font-size: $text-size-small;
+        margin: 0;
+      }
+    }
+    &__icon {
+      width: 42px;
+      height: 42px;
+      img {
+        width: 100%;
+      }
+    }
+    &__button-container {
+      height: 2.2rem;
+      width: 2.2rem;
+      min-width: auto;
+      border: none;
+      //margin-right: 30px;
+    }
+    &__button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
 }

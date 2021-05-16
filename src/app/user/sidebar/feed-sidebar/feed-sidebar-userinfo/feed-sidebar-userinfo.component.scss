@@ -1,0 +1,78 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
+@import '../../../../../styles/buttons.scss';
+
+@import '../../../../../styles/mixins';
+
+.feed-sidebar-userinfo {
+  &__container {
+    @include sidebarContainer;
+    @include blockMainStyle;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__background {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: $block-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    margin-top: -50px;
+    position: relative;
+    margin-bottom: 15px;
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+  }
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px 25px 15px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    img {
+      margin-left: 5px;
+    }
+  }
+  &__name {
+    font-size: $text-size-md;
+    font-weight: bold;
+    line-height: 13px;
+    margin: 0;
+  }
+  &__desc {
+    text-align: center;
+    font-size: $text-size-small;
+    line-height: 150%;
+  }
+
+  &__button-block {
+    @include sidebarContainer;
+    @include blockMainStyle;
+  }
+  &__button {
+    width: 100%;
+  }
+}

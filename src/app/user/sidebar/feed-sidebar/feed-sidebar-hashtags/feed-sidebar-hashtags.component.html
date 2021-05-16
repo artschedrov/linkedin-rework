@@ -1,0 +1,14 @@
+<div class="feed-sidebar-hashtags" *ngIf="hashtags$ | async as hashtags">
+  <div class="feed-sidebar-hashtags__container">
+    <div class="feed-sidebar-hashtags__title-container">
+      <div>
+        <h3 class="feed-sidebar-hashtags__title">Followed hashtags</h3>
+      </div>
+    </div>
+    <div class="feed-sidebar-hashtags__hashtags">
+      <div class="feed-sidebar-hashtags__hashtag-container" *ngFor="let hashtag of hashtags">
+        <p class="feed-sidebar-hashtags__hashtag-name">#{{hashtag.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>

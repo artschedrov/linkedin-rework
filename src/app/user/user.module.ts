@@ -40,6 +40,14 @@ import { PostCardCommentThisComponent } from './feed-page/post-card/post-card-co
 import { PostCardHighratedPostComponent } from './feed-page/post-card/post-card-highrated-post/post-card-highrated-post.component';
 import { PostCardFirstCommentComponent } from './feed-page/post-card/post-card-first-comment/post-card-first-comment.component';
 import { RefPostDirective } from './feed-page/post-card/refPost.directive';
+import { PostCardFirstPostComponent } from './feed-page/post-card/post-card-first-post/post-card-first-post.component';
+import { FeedSidebarComponent } from './sidebar/feed-sidebar/feed-sidebar.component';
+import { FeedSidebarUserinfoComponent } from './sidebar/feed-sidebar/feed-sidebar-userinfo/feed-sidebar-userinfo.component';
+import { FeedSidebarMygroupsComponent } from './sidebar/feed-sidebar/feed-sidebar-mygroups/feed-sidebar-mygroups.component';
+import { FeedSidebarHashtagsComponent } from './sidebar/feed-sidebar/feed-sidebar-hashtags/feed-sidebar-hashtags.component';
+import { FeedSidebarArticlesComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/feed-sidebar-articles.component';
+import { GroupCardComponent } from './sidebar/feed-sidebar/feed-sidebar-mygroups/group-card/group-card.component';
+import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/article-card/article-card.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +85,15 @@ import { RefPostDirective } from './feed-page/post-card/refPost.directive';
     PostCardCommentThisComponent,
     PostCardHighratedPostComponent,
     PostCardFirstCommentComponent,
-    RefPostDirective
+    RefPostDirective,
+    PostCardFirstPostComponent,
+    FeedSidebarComponent,
+    FeedSidebarUserinfoComponent,
+    FeedSidebarMygroupsComponent,
+    FeedSidebarHashtagsComponent,
+    FeedSidebarArticlesComponent,
+    GroupCardComponent,
+    ArticleCardComponent
   ],
   imports: [
     CommonModule,

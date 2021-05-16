@@ -1,0 +1,22 @@
+<div class="feed-sidebar-mygroups" *ngIf="groups$ | async as groups">
+  <div class="feed-sidebar-mygroups__container">
+    <div class="feed-sidebar-mygroups__title-container">
+      <div>
+        <h3 class="feed-sidebar-mygroups__title">My groups</h3>
+      </div>
+      <div>
+        <a class="feed-sidebar-mygroups__link" href="">view all</a>
+      </div>
+    </div>
+    <div class="feed-sidebar-mygroups__groups">
+      <app-group-card
+      *ngFor="let group of groups"
+      [group]="group"
+      >
+      </app-group-card>
+    </div>
+    <div class="feed-sidebar-mygroups__link-container">
+      <a class="feed-sidebar-mygroups__link" href="#">Show all({{groups.length}})</a>
+    </div>
+  </div>
+</div>

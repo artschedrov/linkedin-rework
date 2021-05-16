@@ -1,0 +1,24 @@
+<div class="feed-sidebar-userinfo">
+  <div class="feed-sidebar-userinfo__container">
+    <div class="feed-sidebar-userinfo__background">
+      <img [src]="profile.infoPic" alt="">
+    </div>
+    <div class="feed-sidebar-userinfo__avatar">
+      <img [src]="profile.avatar" alt="">
+    </div>
+    <div class="feed-sidebar-userinfo__user-info">
+      <div class="feed-sidebar-userinfo__wrapper">
+        <div class="feed-sidebar-userinfo__title">
+          <p class="feed-sidebar-userinfo__name">{{profile.firstName}} {{profile.lastName}}</p>
+          <img [src]="profile.userLogo" alt="">
+        </div>
+      </div>
+      <div class="feed-sidebar-userinfo__desc">
+        <p>{{profile.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="feed-sidebar-userinfo__button-block">
+    <button class="button feed-sidebar-userinfo__button">write new article</button>
+  </div>
+</div>

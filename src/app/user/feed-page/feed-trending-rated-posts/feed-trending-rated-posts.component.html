@@ -1,11 +1,11 @@
-<!-- <div class="feed-last-liked-post" *ngIf="lastLikedPosts$ | async as lastLikedPosts">
-  <div class="feed-last-liked-post__container">
-    <div class="feed-last-liked-post__post-container">
+<div class="feed-trending-rated-post" *ngIf="highRatedPosts$ | async as highRatedPosts">
+  <div class="feed-trending-rated-post__container">
+    <div class="feed-trending-rated__post-container">
       <app-post-card
-      *ngFor="let post of lastLikedPosts"
+      *ngFor="let post of highRatedPosts"
       [post]="post"
-      [parentName]="'app-feed-last-liked-posts'"
+      [parentName]="'app-feed-trending-rated-posts'"
       ></app-post-card>
     </div>
   </div>
-</div> -->
+</div>

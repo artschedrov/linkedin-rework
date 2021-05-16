@@ -6,7 +6,6 @@
 
 .profile-info {
   @include blockMainStyle;
-  &__container {}
   &__img {
     width: 100%;
   }
