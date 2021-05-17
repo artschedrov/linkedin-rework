@@ -16,7 +16,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a class="menu__link" [routerLink]="['/network']">
+          <a class="menu__link" [routerLink]="['/user', 'network']">
             <div class="menu__link__wrapper">
               <img src="../../assets/icons/users.svg" alt="">
               <p class="menu__title">Network</p>
@@ -60,8 +60,11 @@
         </div>
       </div>
     </div>
-    <div class="other">
-      <p>Other</p>
+    <div class="button-header">
+      <button (click)="openSandwitchMenu()">
+        <img src="../../assets/icons/more-horizontal.svg" alt="">
+        <p class="button-header__title">Other</p>
+      </button>
     </div>
   </div>
 </div>

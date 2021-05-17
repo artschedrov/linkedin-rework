@@ -1,15 +1,17 @@
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_fonts.scss';
 
-@import '../../../styles/tabs.scss';
-
-.profile {
+.network {
   &__container {
     display: flex;
     
   }
   &__wrapper {
     flex: 2 1 70%;
+  }
+  &__sidebar {
+    margin-left: 40px;
+    flex: 2 1 25%;
   }
   &__navigation {
     margin-top: 35px;
@@ -45,9 +47,4 @@
       display: block;
     }
   }
-}
-
-.profile-sidebar {
-  margin-left: 40px;
-  flex: 2 1 25%;
 }

@@ -123,13 +123,70 @@
   }
 }
 
-.other {
-  cursor: pointer;
-  width: 25%;
-  &__button {
-    &::before {
-      content: '\2807';
-      font-size: 50px;
-    }
+.button-header {
+  margin-right: 40px;
+  margin-left: 23px;
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 11px;
+  }
+  button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
+
+// .other {
+//   display: flex;
+//   height: 100%;
+//   width: 100%;
+//   position: fixed;
+//   z-index: 99;
+//   top: 0;
+//   right: -100%;
+//   overflow-x: hidden;
+//   transition: 0.5s;
+//   &__blur {
+//     width: 100%;
+//     background-color: #fff;
+//     background-size: 100%;
+//     opacity: 0.8;
+//   }
+//   &__menu-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//   }
+//   &__menu-header {
+//     background: #fff;
+//     //width: 60%;
+//     display: flex;
+//     button {
+//       width: 90px;
+//       height: 80px;
+//       border: none;
+//       background-color: #fff;
+//       cursor: pointer;
+//     }
+//     p {
+//       margin: 0;
+//     }
+//   }
+//   &__menu-header__content {
+//     background-color: #fff;
+//     width: 60%;
+//     height: 100%;
+//   }
+//   &__menu-container-title {
+//   }
+//   &--active {
+//     right: 0;
+//   }
+// }

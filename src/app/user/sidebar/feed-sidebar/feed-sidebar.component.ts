@@ -18,6 +18,5 @@ export class FeedSidebarComponent implements OnInit {
   ngOnInit(): void {
     let path = '/profiles.json'
     this.profiles$ = this.sidebarService.getSideBarInfo(path);
-    console.log(this.profiles$);
   }
 }

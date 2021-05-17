@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserLayoutComponent } from '../user/shared/components/user-layout/user-layout.component';
 import { Profile, ProfileViews } from '../user/shared/services/profile.interface';
 
 @Component({
@@ -18,7 +19,11 @@ export class HeaderComponent implements OnInit {
   }
   @Input()
   profile!: Profile;
-  constructor() {}
+  constructor(private userLayout: UserLayoutComponent) {}
+
+  openSandwitchMenu() {
+    this.userLayout.switchMenu();
+  }
 
   ngOnInit() {
   }

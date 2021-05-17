@@ -1,14 +1,70 @@
 @import '../../../../../styles/variables';
 @import '../../../../../styles/_fonts.scss';
 
+@import '../../../../../styles/buttons.scss';
+
 main {
   background: $fone-color;
   padding-top: 80px;
   display: flex;
 }
 
+.blur {
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
 .container {
   margin: 0 auto;
   padding: 40px 110px;
   flex: 1;
+}
+
+.other {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: -100%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  &__blur {
+    width: 80%;
+    //background-color: #fff;
+    background-size: 100%;
+    opacity: 0.8;
+  }
+  &__menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+  &__menu-header {
+    background: #fff;
+    width: 70%;
+    display: flex;
+    button {
+      width: 90px;
+      height: 80px;
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__menu-header__content {
+    background-color: #fff;
+    width: 55%;
+    height: 100%;
+  }
+  &__menu-container-title {
+  }
+  &--active {
+    right: 0;
+  }
 }

@@ -48,6 +48,8 @@ import { FeedSidebarHashtagsComponent } from './sidebar/feed-sidebar/feed-sideba
 import { FeedSidebarArticlesComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/feed-sidebar-articles.component';
 import { GroupCardComponent } from './sidebar/feed-sidebar/feed-sidebar-mygroups/group-card/group-card.component';
 import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/article-card/article-card.component';
+import { NetworkPageComponent } from './network-page/network-page.component';
+import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,9 @@ import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articl
     FeedSidebarHashtagsComponent,
     FeedSidebarArticlesComponent,
     GroupCardComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    NetworkPageComponent,
+    NetworkSidebarComponent
   ],
   imports: [
     CommonModule,
@@ -106,7 +110,8 @@ import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articl
           {path: '', redirectTo: '/user/profile', pathMatch: 'full'},
           {path: 'login', component: LoginPageComponent},
           {path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard]},
-          {path: 'feed', component: FeedPageComponent, canActivate: [AuthGuard]}
+          {path: 'feed', component: FeedPageComponent, canActivate: [AuthGuard]},
+          {path: 'network', component: NetworkPageComponent, canActivate: [AuthGuard]}
         ]
       }
     ])
