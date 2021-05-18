@@ -50,6 +50,7 @@ import { GroupCardComponent } from './sidebar/feed-sidebar/feed-sidebar-mygroups
 import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/article-card/article-card.component';
 import { NetworkPageComponent } from './network-page/network-page.component';
 import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sidebar.component';
+import { SandwitchMenuComponent } from './shared/components/sandwitch-menu/sandwitch-menu.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sideb
     GroupCardComponent,
     ArticleCardComponent,
     NetworkPageComponent,
-    NetworkSidebarComponent
+    NetworkSidebarComponent,
+    SandwitchMenuComponent
   ],
   imports: [
     CommonModule,
@@ -119,6 +121,6 @@ import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sideb
   exports: [
     RouterModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, SandwitchMenuComponent],
 })
 export class UserModule { }

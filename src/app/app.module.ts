@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { MainLayoutComponent } from './public/components/main-layout/main-layout.component';
 import { SharedModule } from './shared/shared.module';
+import { SandwitchMenuComponent } from './user/shared/components/sandwitch-menu/sandwitch-menu.component';
 import { UserLayoutComponent } from './user/shared/components/user-layout/user-layout.component';
 import { AuthInterceptor } from './user/shared/services/auth.interceptor';
 import { SidebarService } from './user/shared/services/sidebar.service';
@@ -23,7 +24,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    MainLayoutComponent,
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SandwitchMenuComponent } from '../user/shared/components/sandwitch-menu/sandwitch-menu.component';
 import { UserLayoutComponent } from '../user/shared/components/user-layout/user-layout.component';
 import { Profile, ProfileViews } from '../user/shared/services/profile.interface';
 
@@ -19,10 +20,10 @@ export class HeaderComponent implements OnInit {
   }
   @Input()
   profile!: Profile;
-  constructor(private userLayout: UserLayoutComponent) {}
+  constructor(private sandwitchMenu: SandwitchMenuComponent) {}
 
   openSandwitchMenu() {
-    this.userLayout.switchMenu();
+    this.sandwitchMenu.switchMenu();
   }
 
   ngOnInit() {

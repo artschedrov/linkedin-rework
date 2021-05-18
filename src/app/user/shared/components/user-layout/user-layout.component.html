@@ -13,35 +13,5 @@
 <footer class="footer__layout" *ngIf="auth.isAuthenticated()">
   <app-footer routerLinkActive="active"></app-footer>
 </footer>
-
-<div id="header-sandwitch" class="other">
-  <div class="other__blur">
-  </div>
-  <div class="other__menu-wrapper">
-    <div class="other__menu-header">
-      <button (click)="switchMenu()">
-        <img src="../../assets/icons/x.svg" alt="">
-        <p>Close</p>
-      </button>
-      <div class="other__menu-container">
-        <div>
-          <h3 class="other__menu-container-title">More from LinkedIn</h3>
-        </div>
-      </div>
-    </div>
-    <div class="other__menu-header__content">
-      <div>
-        <button class="button">
-          <div>
-            <img src="../../../../../assets/icons/book-open.svg" alt="">
-          </div>
-          <div>
-            <h3>Learning with LinkedIn</h3>
-            <p>Courses, lectures, workshops</p>
-          </div>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+<app-sandwitch-menu></app-sandwitch-menu>
 
