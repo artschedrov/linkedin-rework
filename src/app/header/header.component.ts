@@ -26,6 +26,15 @@ export class HeaderComponent implements OnInit {
     this.sandwitchMenu.switchMenu();
   }
 
+  switchNavTab($event: any) {
+    const tablinks = document.getElementsByClassName('menu__link') as HTMLCollectionOf<HTMLElement>;
+    console.log(tablinks);
+    for (let  i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(' menu__link--active', '');
+    }
+    $event.currentTarget.className += ' menu__link--active';
+  }
+
   ngOnInit() {
   }
 }
