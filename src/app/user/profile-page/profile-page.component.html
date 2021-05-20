@@ -4,7 +4,34 @@
     *ngFor="let profile of profiles"
     [profile]="profile"
     ></app-profile-info>
-    <div class="tabs__navigation">
+    <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Profile" class="profile__tab-button">
+        <div class="tabs__tab-item">
+          <app-profile-about
+            *ngFor="let profile of profiles"
+            [profile]="profile"
+          ></app-profile-about>
+          <app-profile-projects
+            *ngFor="let profile of profiles"
+            [profile]="profile"
+          ></app-profile-projects>
+          <app-profile-skills></app-profile-skills>
+          <app-profile-experience></app-profile-experience>
+          <app-profile-education></app-profile-education>
+        </div>
+      </mat-tab>
+      <mat-tab label="Activity & interests">
+        <div class="tabs__tab-item">
+          <h2>Здесь пока ничего нет</h2>
+        </div>
+      </mat-tab>
+      <mat-tab label="Articles (3)">
+        <div class="tabs__tab-item">
+          <h2>Здесь пока ничего нет</h2>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <!-- <div class="tabs__navigation">
       <button class="tabs__tab-button tabs__tab-button--active" (click)="changeTab($event, 'profile')">Profile</button>
       <button class="tabs__tab-button" (click)="changeTab($event, 'activity')">Activity & interests</button>
       <button class="tabs__tab-button" (click)="changeTab($event, 'articles')">Articles (3)</button>
@@ -33,7 +60,7 @@
       <div class="tabs__tab-item">
         <h2>Здесь пока ничего нет</h2>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="profile-sidebar">
     <app-sidebar>

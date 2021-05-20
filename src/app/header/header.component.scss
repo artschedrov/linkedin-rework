@@ -27,9 +27,12 @@
     list-style: none;
     display: flex;
     padding: 0;
+    &:last-child {
+      margin-right: 30px;
+    }
   }
   &__item {
-    margin-left: 50px;
+    margin-left: 40px;
   }
   &__link {
     text-decoration: none;

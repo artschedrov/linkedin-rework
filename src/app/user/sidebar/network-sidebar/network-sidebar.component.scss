@@ -1,0 +1,49 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/fonts';
+
+@import '../../../../styles/mixins';
+
+.network-sidebar {
+  @include blockMainStyle;
+  margin-top: 20px;
+  background: #FCFDFD;
+  &__container {
+    @include sidebarContainer;
+  }
+}
+.network__tabs {
+  display: flex;
+  flex-direction: column;
+}
+.tabs {
+  &__tab-button {
+    font-family: Gotham Pro Regular;
+    font-size: $text-size-small;
+    text-transform: uppercase;
+    background: $block-color;
+    border: solid  #E7E7E7 1px;
+    border-bottom: 0;
+    padding: 1.2em 4em;
+    min-width: 240px;
+    cursor: pointer;
+    &--active {
+      color: $block-color;
+      background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+      padding: 2em 4em 1.2em 4em;
+      border-radius: 6px 6px 0 0 !important;
+    }
+    &:first-child {
+      border-radius: 6px 0 0 0;
+    }
+    &:last-child {
+      border-radius: 0 6px 0 0;
+    }
+  }
+  &__tab {
+    display: none;
+    margin-top: 30px;
+    &--active {
+      display: block;
+    }
+  }
+}

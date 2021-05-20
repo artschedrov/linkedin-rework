@@ -51,6 +51,18 @@ import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articl
 import { NetworkPageComponent } from './network-page/network-page.component';
 import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sidebar.component';
 import { SandwitchMenuComponent } from './shared/components/sandwitch-menu/sandwitch-menu.component';
+import { JobsPageComponent } from './jobs-page/jobs-page.component';
+import { ChatPageComponent } from './chat-page/chat-page.component';
+import { NoticePageComponent } from './notice-page/notice-page.component';
+import { MaterialModule } from '../material/material.module';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { ConnectionsComponent } from './network-page/connections/connections.component';
+import { InvitationsComponent } from './network-page/invitations/invitations.component';
+import { TeammatesComponent } from './network-page/teammates/teammates.component';
+import { GroupsComponent } from './network-page/groups/groups.component';
+import { PagesComponent } from './network-page/pages/pages.component';
+import { HashtagsComponent } from './network-page/hashtags/hashtags.component';
+import { NavigationPanelComponent } from './shared/components/navigation-panel/navigation-panel.component';
 
 @NgModule({
   declarations: [
@@ -99,12 +111,23 @@ import { SandwitchMenuComponent } from './shared/components/sandwitch-menu/sandw
     ArticleCardComponent,
     NetworkPageComponent,
     NetworkSidebarComponent,
-    SandwitchMenuComponent
+    SandwitchMenuComponent,
+    JobsPageComponent,
+    ChatPageComponent,
+    NoticePageComponent,
+    ConnectionsComponent,
+    InvitationsComponent,
+    TeammatesComponent,
+    GroupsComponent,
+    PagesComponent,
+    HashtagsComponent,
+    NavigationPanelComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     SharedModule,
+    MaterialModule,
     ReactiveFormsModule,
     RouterModule.forChild([
       {
@@ -113,7 +136,10 @@ import { SandwitchMenuComponent } from './shared/components/sandwitch-menu/sandw
           {path: 'login', component: LoginPageComponent},
           {path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard]},
           {path: 'feed', component: FeedPageComponent, canActivate: [AuthGuard]},
-          {path: 'network', component: NetworkPageComponent, canActivate: [AuthGuard]}
+          {path: 'network', component: NetworkPageComponent, canActivate: [AuthGuard]},
+          {path: 'jobs', component: JobsPageComponent, canActivate: [AuthGuard]},
+          {path: 'chat', component: ChatPageComponent, canActivate: [AuthGuard]},
+          {path: 'notice', component: NoticePageComponent, canActivate: [AuthGuard]}
         ]
       }
     ])

@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit {
     newViews: 32,
     totalViews: 324,
   }
+  links = ['/user/feed', '/user/network'];
+  activeLink = this.links[0];
   @Input()
   profile!: Profile;
   constructor(private sandwitchMenu: SandwitchMenuComponent) {}
@@ -28,7 +30,6 @@ export class HeaderComponent implements OnInit {
 
   switchNavTab($event: any) {
     const tablinks = document.getElementsByClassName('menu__link') as HTMLCollectionOf<HTMLElement>;
-    console.log(tablinks);
     for (let  i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(' menu__link--active', '');
     }

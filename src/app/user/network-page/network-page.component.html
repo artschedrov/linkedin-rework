@@ -3,19 +3,23 @@
     <app-sidebar></app-sidebar>
   </div>
   <div class="network__wrapper">
-    <div class="profile__navigation">
-      <button class="network__tab-button network__tab-button--active">Received</button>
-      <button class="network__tab-button">sent</button>
+    <div id="connections" class="tabs__tab">
+      <app-connections></app-connections>
     </div>
-    <div id="received" class="network__tab--active">
-      <div class="network__tab-item">
-        <h2>Здесь пока ничего нет</h2>
-      </div>
+    <div id="invitations" class="tabs__tab tabs__tab--active">
+      <app-invitations></app-invitations>
     </div>
-    <div id="sent" class="network__tab">
-      <div class="network__tab-item">
-        <h2>Здесь пока ничего нет</h2>
-      </div>
+    <div id="teammates" class="tabs__tab">
+      <app-teammates></app-teammates>
+    </div>
+    <div id="groups" class="tabs__tab">
+      <app-groups></app-groups>
+    </div>
+    <div id="pages" class="tabs__tab">
+      <app-pages></app-pages>
+    </div>
+    <div id="hashtags" class="tabs__tab">
+      <app-hashtags></app-hashtags>
     </div>
   </div>
 </div>
