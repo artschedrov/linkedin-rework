@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
-import { Profile } from '../../shared/services/profile.interface';
+import { Profile } from '../../shared/interfaces/profile.interface';
 import { SidebarService } from '../../shared/services/sidebar.service';
 
 @Component({

@@ -1,0 +1,17 @@
+@import '../../../../styles/filter.scss';
+@import '../../../../styles/variables';
+@import '../../../../styles/fonts';
+@import '../../../../styles/buttons.scss';
+@import '../../../../styles/mixins';
+
+.new-connections {
+  &__card {
+    @include blockMainStyle;
+    margin-bottom: 10px;
+  }
+}
+.filter__select__trigger {
+  span {
+    color: #181818;
+  }
+}

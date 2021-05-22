@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FeedPageComponent } from './feed-page/feed-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { UserLayoutComponent } from './shared/components/user-layout/user-layout.component';
+import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { ProfileInfoComponent } from './profile-page/profile-info/profile-info.component';
 import { ProfileAboutComponent } from './profile-page/profile-about/profile-about.component';
 import { ProfileEducationComponent } from './profile-page/profile-education/profile-education.component';
@@ -49,20 +49,19 @@ import { FeedSidebarArticlesComponent } from './sidebar/feed-sidebar/feed-sideba
 import { GroupCardComponent } from './sidebar/feed-sidebar/feed-sidebar-mygroups/group-card/group-card.component';
 import { ArticleCardComponent } from './sidebar/feed-sidebar/feed-sidebar-articles/article-card/article-card.component';
 import { NetworkPageComponent } from './network-page/network-page.component';
-import { NetworkSidebarComponent } from './sidebar/network-sidebar/network-sidebar.component';
-import { SandwitchMenuComponent } from './shared/components/sandwitch-menu/sandwitch-menu.component';
+import { SandwitchMenuComponent } from './sandwitch-menu/sandwitch-menu.component';
 import { JobsPageComponent } from './jobs-page/jobs-page.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
 import { NoticePageComponent } from './notice-page/notice-page.component';
 import { MaterialModule } from '../material/material.module';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { ConnectionsComponent } from './network-page/connections/connections.component';
 import { InvitationsComponent } from './network-page/invitations/invitations.component';
 import { TeammatesComponent } from './network-page/teammates/teammates.component';
 import { GroupsComponent } from './network-page/groups/groups.component';
 import { PagesComponent } from './network-page/pages/pages.component';
 import { HashtagsComponent } from './network-page/hashtags/hashtags.component';
-import { NavigationPanelComponent } from './shared/components/navigation-panel/navigation-panel.component';
+import { NavigationPanelComponent } from './navigation-panel/navigation-panel.component';
+import { InvitationService } from './network-page/invitations/shared/invitations.service';
 
 @NgModule({
   declarations: [
@@ -110,7 +109,6 @@ import { NavigationPanelComponent } from './shared/components/navigation-panel/n
     GroupCardComponent,
     ArticleCardComponent,
     NetworkPageComponent,
-    NetworkSidebarComponent,
     SandwitchMenuComponent,
     JobsPageComponent,
     ChatPageComponent,
@@ -121,7 +119,7 @@ import { NavigationPanelComponent } from './shared/components/navigation-panel/n
     GroupsComponent,
     PagesComponent,
     HashtagsComponent,
-    NavigationPanelComponent
+    NavigationPanelComponent,
   ],
   imports: [
     CommonModule,
@@ -147,6 +145,10 @@ import { NavigationPanelComponent } from './shared/components/navigation-panel/n
   exports: [
     RouterModule
   ],
-  providers: [AuthService, AuthGuard, SandwitchMenuComponent],
+  providers: [
+    AuthService, 
+    AuthGuard, 
+    SandwitchMenuComponent, 
+    InvitationService],
 })
 export class UserModule { }

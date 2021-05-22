@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Profile } from 'src/app/user/shared/services/profile.interface';
+import { Profile } from 'src/app/user/shared/interfaces/profile.interface';
 
 @Component({
   selector: 'app-feed-sidebar-userinfo',

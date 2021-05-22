@@ -1,9 +1,9 @@
-@import '../../../../styles/variables';
-@import '../../../../styles/fonts';
+@import '../../../../../styles/variables';
+@import '../../../../../styles/fonts';
 
-@import '../../../../styles/mixins';
+@import '../../../../../styles/mixins';
 
-.network-sidebar {
+.navigation-sidebar {
   @include blockMainStyle;
   margin-top: 20px;
   background: #FCFDFD;
@@ -11,7 +11,7 @@
     @include sidebarContainer;
   }
 }
-.network__tabs {
+.navigation__tabs {
   display: flex;
   flex-direction: column;
 }
@@ -27,10 +27,10 @@
     min-width: 240px;
     cursor: pointer;
     &--active {
-      color: $block-color;
-      background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+      //background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
       padding: 2em 4em 1.2em 4em;
-      border-radius: 6px 6px 0 0 !important;
+      border-left: 10px solid #0275B1;
+      //border-radius: 6px 6px 0 0 !important;
     }
     &:first-child {
       border-radius: 6px 0 0 0;

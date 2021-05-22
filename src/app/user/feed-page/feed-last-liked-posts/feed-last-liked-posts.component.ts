@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FeedService } from '../../shared/services/feed.service';
-import { Post } from '../../shared/services/post.interface';
+import { Post } from '../../shared/interfaces/post.interface';
 
 @Component({
   selector: 'app-feed-last-liked-posts',
@@ -17,5 +17,6 @@ export class FeedLastLikedPostsComponent implements OnInit {
   ngOnInit(): void {
     let path = '/posts/lastLiked.json';
     this.lastLikedPosts$ = this.feedService.getFeedInfo(path);
+    console.log(this.lastLikedPosts$);
   }
 }

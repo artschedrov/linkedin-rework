@@ -1,0 +1,46 @@
+@import './variables';
+
+.filter {
+  font-family: Gotham Pro;
+  font-size: $text-size-md;
+  line-height: 11px;
+  text-transform: uppercase;
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-right: 2px;
+  }
+
+  &__select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+  &__select {
+    display: flex;
+    flex-direction: column;
+    &__trigger {
+      font-family: Gotham Pro;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: $text-size-md;
+      text-transform: uppercase;
+      color: #0275B1;
+      height: 32px;
+      line-height: 11px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.arrow {
+  position: relative;
+  height: 7px;
+  width: 7px;
+  margin-left: 5px;
+}

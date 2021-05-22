@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProfileEducation } from '../../shared/services/profile.interface';
+import { ProfileEducation } from '../../shared/interfaces/profile.interface';
 import { ProfileService } from '../../shared/services/profile.service';
 
 @Component({

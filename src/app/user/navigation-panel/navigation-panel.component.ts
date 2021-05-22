@@ -1,18 +1,18 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NetworkService } from '../../shared/services/network.service';
+import { NavigationService } from '../shared/services/navigation.service';
 
 @Component({
-  selector: 'app-network-sidebar',
-  templateUrl: './network-sidebar.component.html',
-  styleUrls: ['./network-sidebar.component.scss'],
+  selector: 'app-navigation-panel',
+  templateUrl: './navigation-panel.component.html',
+  styleUrls: ['./navigation-panel.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NetworkSidebarComponent implements OnInit {
+export class NavigationPanelComponent implements OnInit {
 
-  networkIds!: any;
-  activeNetworkId: any;
+  linksIds!: any;
+  activeLinkId: any;
 
-  constructor(private networkService: NetworkService) { }
+  constructor(private navigationService: NavigationService) { }
 
   changeTab($event: any, tabName: any) {
     let currentTab;
@@ -36,9 +36,8 @@ export class NetworkSidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.networkIds = this.networkService.getScopeNetworkIds();
-    console.log(this.networkIds);
-    this.activeNetworkId = this.networkIds[1];
+    this.linksIds = this.navigationService.getScopeNetworkIds();
+    this.activeLinkId = this.linksIds[1];
   }
 
 }

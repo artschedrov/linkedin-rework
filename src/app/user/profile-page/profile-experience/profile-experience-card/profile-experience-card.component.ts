@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProfileExperience } from 'src/app/user/shared/services/profile.interface';
+import { ProfileExperience } from 'src/app/user/shared/interfaces/profile.interface';
 
 @Component({
   selector: 'app-profile-experience-card',

@@ -13,7 +13,7 @@
     padding: 30px 110px;
   }
   &__logo {
-    flex: 1 2 10%;
+    flex: 1 2 20%;
   }
   &__menu {
     font-family: Gotham Pro;
@@ -33,6 +33,7 @@
     display: flex;
   }
   &__menu-nav {
+    flex: 2 2 50%;
     &__list {
       font-family: Gotham Pro;
       list-style: none;
@@ -53,6 +54,7 @@
   }
   &__menu-btn {
     margin-left: 65px;
+    flex: 2 2 30%;
     &__buttons {
       margin-top: 30px;
     }
@@ -62,6 +64,7 @@
   }
   &__menu-lang {
     margin-left: 60px;
+    flex: 2 2 30%;
     &__container {
       margin-top: 30px;
       max-width: 300px;

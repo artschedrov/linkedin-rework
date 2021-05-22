@@ -1,7 +1,7 @@
 import { Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationPanelComponent } from '../navigation-panel/navigation-panel.component';
 import { FeedSidebarComponent } from './feed-sidebar/feed-sidebar.component';
-import { NetworkSidebarComponent } from './network-sidebar/network-sidebar.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
 import { RefDirective } from './ref.directive';
 
@@ -18,7 +18,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     const profileSidebarFactory = this.resolver.resolveComponentFactory(ProfileSidebarComponent);
     const feedSidebarFactory = this.resolver.resolveComponentFactory(FeedSidebarComponent);
-    const networkSidebarFactory = this.resolver.resolveComponentFactory(NetworkSidebarComponent);
+    const navigationSidebarFactory = this.resolver.resolveComponentFactory(NavigationPanelComponent);
     
     if (this.router.url === '/user/profile') {
       this.refDir.containerRef.clear();
@@ -30,7 +30,7 @@ export class SidebarComponent implements OnInit {
     }
     if (this.router.url ==='/user/network') {
       this.refDir.containerRef.clear();
-      this.refDir.containerRef.createComponent(networkSidebarFactory);
+      this.refDir.containerRef.createComponent(navigationSidebarFactory);
     }
   }
 }

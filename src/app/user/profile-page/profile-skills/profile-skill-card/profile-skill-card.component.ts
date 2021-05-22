@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProfileSkills } from 'src/app/user/shared/services/profile.interface';
+import { ProfileSkills } from 'src/app/user/shared/interfaces/profile.interface';
 
 @Component({
   selector: 'app-profile-skill-card',

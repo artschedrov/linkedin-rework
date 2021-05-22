@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Hashtag } from 'src/app/user/shared/services/hashtag.interface';
+import { Hashtag } from 'src/app/user/shared/interfaces/hashtag.interface';
 import { SidebarService } from 'src/app/user/shared/services/sidebar.service';
 
 @Component({

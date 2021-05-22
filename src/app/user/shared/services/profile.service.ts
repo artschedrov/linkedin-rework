@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Profile, ProfileEducation, ProfileExperience, ProfileProject, ProfileSkills} from './profile.interface';
+import {Profile, ProfileEducation, ProfileExperience, ProfileProject, ProfileSkills} from '../interfaces/profile.interface';
 import {environment} from '../../../../environments/environment';
 import {map} from 'rxjs/operators';
 

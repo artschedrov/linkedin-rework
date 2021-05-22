@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NetworkService } from '../shared/services/network.service';
+import { NavigationService } from '../shared/services/navigation.service';
 
 @Component({
   selector: 'app-network-page',
@@ -8,12 +8,12 @@ import { NetworkService } from '../shared/services/network.service';
 })
 export class NetworkPageComponent implements OnInit {
 
-  constructor(private networkService: NetworkService) {}
+  constructor(private navigationService: NavigationService) {}
 
   netWorksIds = ['connections', 'invitations', 'teammates', 'groups', 'pages', 'hashtags']
   
   ngOnInit(): void {
-    this.networkService.setScopeNetworkIds(this.netWorksIds);
+    this.navigationService.setScopeNetworkIds(this.netWorksIds);
   }
 
 }

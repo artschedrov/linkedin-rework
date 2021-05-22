@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Profile } from '../../shared/services/profile.interface';
+import { Profile } from '../../shared/interfaces/profile.interface';
 
 @Component({
   selector: 'app-profile-info',

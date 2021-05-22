@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProfileExperience } from '../../shared/services/profile.interface';
+import { ProfileExperience } from '../../shared/interfaces/profile.interface';
 import { ProfileService } from '../../shared/services/profile.service';
 
 @Component({

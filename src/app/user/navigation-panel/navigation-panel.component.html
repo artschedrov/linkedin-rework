@@ -1,0 +1,10 @@
+<div class="navigation-sidebar">
+  <div class="navigation-sidebar__container">
+    <button class="tabs__tab-button" 
+    *ngFor="let linkId of linksIds" 
+    [class.tabs__tab-button--active]="activeLinkId == linkId" 
+    (click)="changeTab($event, linkId)">{{linkId}}
+    </button>
+  </div>
+</div>
+

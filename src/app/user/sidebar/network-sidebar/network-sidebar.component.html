@@ -1,9 +1,0 @@
-<div class="network-sidebar">
-  <div class="network-sidebar__container">
-    <button class="tabs__tab-button" 
-    *ngFor="let networkId of networkIds" 
-    [class.tabs__tab-button--active]="activeNetworkId == networkId" 
-    (click)="changeTab($event, networkId)">{{networkId}}
-    </button>
-  </div>
-</div>

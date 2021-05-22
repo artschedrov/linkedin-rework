@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Article } from 'src/app/user/shared/services/article.interface';
+import { Article } from 'src/app/user/shared/interfaces/article.interface';
 import { SidebarService } from 'src/app/user/shared/services/sidebar.service';
 
 @Component({

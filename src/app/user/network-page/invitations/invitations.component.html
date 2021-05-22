@@ -2,7 +2,37 @@
 <mat-tab-group animationDuration="0ms">
   <mat-tab label="Received">
     <div class="tabs__tab-item">
-      <h2>Здесь пока ничего нет</h2>
+      <div class="filter">
+      <p class="filter__select__trigger"><span>You have </span> <span>{{invitations.length}}</span> New connections</p>
+    </div>
+      <div class="new-connections">
+        <div class="new-connections__container">
+          <div *ngFor="let invitation of invitations" class="new-connections__card">
+            <div>
+              <img src="{{invitation.userPic}}" alt="">
+              <div>{{invitation.userName}}</div>
+              <div>{{invitation.profession}}</div>
+              <p>{{invitation.message}}</p>
+              <button>Accept</button>
+              <button>Decline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tabs__tab-item">
+          <div class="filter">
+            <p class="filter__select__trigger"><span>Recent connections</span></p>
+          </div>
+          <div>
+            <div *ngFor="let recent of recents">
+              <img src="{{recent.userPic}}" alt="">
+              <div>{{recent.userName}}</div>
+              <div>{{recent.profession}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </mat-tab>
   <mat-tab label="sent">

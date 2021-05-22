@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Group } from 'src/app/user/shared/services/group.interface';
+import { Group } from 'src/app/user/shared/interfaces/group.interface';
 
 @Component({
   selector: 'app-group-card',
