@@ -1,0 +1,67 @@
+@import '../../../../../styles/variables';
+
+@import '../../../../../styles/mixins';
+
+.jobs-sidebar-searches {
+  @include blockMainStyle;
+  margin-top: 20px;
+  background: #FCFDFD;
+  &__container {
+    @include sidebarContainer;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+    margin-bottom: 20px;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  &__link-container {
+    margin-top: 20px;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+}
+
+.search-card {
+  padding: 15px 0;
+  background: #E9F0F8;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 15px 15px 10px 15px;
+  cursor: pointer;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text-wrapper {
+    h3 {
+      font-size: $text-size-small;
+      line-height: 125%;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: $text-size-very-sm;
+      margin: 0;
+    }
+    span {
+      color: #02B033;
+    }
+  }
+}
+
+.bell-button {
+    width: 16px;
+    height: 16px;
+    background: #E9F0F8;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}

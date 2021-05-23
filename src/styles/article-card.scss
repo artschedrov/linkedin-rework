@@ -1,0 +1,27 @@
+@import '../styles/variables';
+
+.article-card {
+  padding: 15px 0;
+  &__container {
+    display: flex;
+    cursor: pointer;
+    //align-items: baseline;
+  }
+  &__img-wrapper {
+    width: 80px;
+    height: 52px;
+  }
+  &__text-wrapper {
+    padding-left: 15px;
+  }
+  &__title {
+    font-size: $text-size-md;
+    line-height: 125%;
+    margin: 0;
+  }
+  &__desc {
+    font-size: $text-size-very-sm;
+    line-height: 150%;
+    margin: 0;
+  }
+}

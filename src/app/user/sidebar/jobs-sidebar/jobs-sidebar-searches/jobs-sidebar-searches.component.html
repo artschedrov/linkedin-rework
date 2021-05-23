@@ -1,0 +1,27 @@
+<div class="jobs-sidebar-searches">
+  <div class="jobs-sidebar-searches__container">
+    <div class="jobs-sidebar-searches__title-container">
+      <div>
+        <h3 class="jobs-sidebar-searches__title">My groups</h3>
+      </div>
+      <div>
+        <a class="jobs-sidebar-searches__link" href="">edit list</a>
+      </div>
+    </div>
+    <div *ngFor="let searchesJob of searchesJobs">
+      <div class="search-card">
+        <div class="search-card__container">
+          <div class="search-card__text-wrapper">
+            <h3>{{searchesJob.position}}<span> {{searchesJob.countViews}}</span></h3>
+            <p>{{searchesJob.place}}</p>
+          </div>
+          <div>
+            <button class="bell-button" href="#">
+              <img src="../../../.././../assets/icons/bell-on.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

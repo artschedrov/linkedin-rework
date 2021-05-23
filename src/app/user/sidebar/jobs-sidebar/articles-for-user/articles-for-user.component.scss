@@ -1,9 +1,8 @@
+@import '../../../../../styles/article-card.scss';
+@import '../../../../../styles/mixins';
 @import '../../../../../styles/variables';
 
-@import '../../../../../styles/mixins';
-
-
-.feed-sidebar-mygroups {
+.articles-for-user {
   @include blockMainStyle;
   margin-top: 20px;
   background: #FCFDFD;
@@ -19,13 +18,5 @@
     font-size: 12px;
     text-transform: uppercase;
   }
-  &__link-container {
-    margin-top: 20px;
-  }
-  &__link {
-    @include blockMoreBtnStyle;
-  }
-  &__groups {
-    margin-top: 25px;
-  }
+
 }

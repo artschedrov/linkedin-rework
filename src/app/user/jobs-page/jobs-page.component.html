@@ -1,1 +1,55 @@
-<p>jobs-page works!</p>
+<div class="jobs__container">
+  <div class="jobs__wrapper">
+    <app-jobs-search></app-jobs-search>
+    <div class="filter">
+      <p class="filter__select__trigger"><span>jobs for you</span></p>
+    </div>
+    <div *ngFor="let job of jobs">
+      <div class="jobs__card">
+        <div class="jobs__card__container">
+          <div class="jobs__card__img-wrapper">
+            <img src="{{job.avatar}}" alt="">
+          </div>
+          <div class="jobs__card__text-wrapper">
+            <p class="jobs__card__position">{{job.position}}</p>
+            <div class="jobs__card__title-wrapper">
+              <p class="jobs__card__company">{{job.company}}</p>
+              <p class="jobs__card__place">{{job.place}}</p>
+            </div>
+            <p class="jobs__card__description">{{job.description}}</p>
+          </div>
+        </div>
+        <div>
+          <button class="button jobs__button">More</button>
+        </div>
+      </div>
+    </div>
+    <div class="filter">
+      <p class="filter__select__trigger"><span>new jobs</span></p>
+    </div>
+    <div *ngFor="let newJob of newJobs">
+      <div class="jobs__card">
+        <div class="jobs__card__container">
+          <div class="jobs__card__img-wrapper">
+            <img src="{{newJob.avatar}}" alt="">
+          </div>
+          <div class="jobs__card__text-wrapper">
+            <p class="jobs__card__position">{{newJob.position}}</p>
+            <div class="jobs__card__title-wrapper">
+              <p class="jobs__card__company">{{newJob.company}}</p>
+              <p class="jobs__card__place">{{newJob.place}}</p>
+            </div>
+            <p class="jobs__card__description">{{newJob.description}}</p>
+          </div>
+        </div>
+        <div>
+          <button class="button jobs__button">More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jobs__sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+</div>
+

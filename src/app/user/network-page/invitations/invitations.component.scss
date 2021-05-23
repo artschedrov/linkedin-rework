@@ -10,8 +10,80 @@
     margin-bottom: 10px;
   }
 }
+
+.invitations-card {
+  @include blockMainStyle;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  justify-content: space-between;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__img-wrapper {
+    width: 54px;
+    height: 54px;
+    margin-right: 16px;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  &__text-wrapper {
+    h3 {
+      font-size: $text-size-md;
+      margin: 0;
+    }
+    p {
+      font-size: $text-size-very-sm;
+      margin-top: 10px;
+    }
+  }
+  &__message-wrapper {
+    border-left: 2px solid #0275B1;
+    margin: 0 50px;
+    width: 100%;
+  }
+  &__message {
+    padding-left: 15px;
+    font-size: $text-size-small;
+  }
+  &__buttons-wrapper {
+    display: flex;
+  }
+  &__button {
+    min-width: 8.5em !important;
+    margin-right: 15px;
+  }
+}
+
 .filter__select__trigger {
   span {
     color: #181818;
+  }
+}
+
+.recent {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    min-width: 100%;
+    //padding-right: 5px;
+  }
+  &__item {
+    flex: 1 0 0;
+    min-width: 50%;
+    &:nth-child(odd) {
+      padding-right: 5px;
+    }
+    &:nth-child(even) {
+      padding-left: 5px;
+    }
+    //padding-right: 5px;
   }
 }

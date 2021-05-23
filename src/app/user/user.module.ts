@@ -62,6 +62,15 @@ import { PagesComponent } from './network-page/pages/pages.component';
 import { HashtagsComponent } from './network-page/hashtags/hashtags.component';
 import { NavigationPanelComponent } from './navigation-panel/navigation-panel.component';
 import { InvitationService } from './network-page/invitations/shared/invitations.service';
+import { JobsSidebarComponent } from './sidebar/jobs-sidebar/jobs-sidebar.component';
+import { JobsSearchComponent } from './jobs-page/jobs-search/jobs-search.component';
+import { JobService } from './jobs-page/shared/jobs.service';
+import { JobsSidebarSearchesComponent } from './sidebar/jobs-sidebar/jobs-sidebar-searches/jobs-sidebar-searches.component';
+import { JobsSidebarTrackedComponent } from './sidebar/jobs-sidebar/jobs-sidebar-tracked/jobs-sidebar-tracked.component';
+import { ArticlesForUserComponent } from './sidebar/jobs-sidebar/articles-for-user/articles-for-user.component';
+import { JobsSearchesService } from './sidebar/jobs-sidebar/jobs-sidebar-searches/shared/jobsSearches.service';
+import { JobsTrackedService } from './sidebar/jobs-sidebar/jobs-sidebar-tracked/shared/jobsTracked.service';
+import { ArticleForUserService } from './sidebar/jobs-sidebar/articles-for-user/shared/articleForUser.service';
 
 @NgModule({
   declarations: [
@@ -120,6 +129,11 @@ import { InvitationService } from './network-page/invitations/shared/invitations
     PagesComponent,
     HashtagsComponent,
     NavigationPanelComponent,
+    JobsSidebarComponent,
+    JobsSearchComponent,
+    JobsSidebarSearchesComponent,
+    JobsSidebarTrackedComponent,
+    ArticlesForUserComponent,
   ],
   imports: [
     CommonModule,
@@ -149,6 +163,11 @@ import { InvitationService } from './network-page/invitations/shared/invitations
     AuthService, 
     AuthGuard, 
     SandwitchMenuComponent, 
-    InvitationService],
+    InvitationService,
+    JobService,
+    JobsSearchesService,
+    JobsTrackedService,
+    ArticleForUserService
+  ],
 })
 export class UserModule { }

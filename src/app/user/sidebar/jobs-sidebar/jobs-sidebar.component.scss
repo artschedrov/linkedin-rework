@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/buttons.scss';
+
+@import '../../../../styles/mixins';
+
+.jobs-sidebar {
+
+  &__button-block {
+    @include sidebarContainer;
+    @include blockMainStyle;
+  }
+  &__button {
+    width: 100%;
+  }
+
+}

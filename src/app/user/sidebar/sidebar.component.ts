@@ -2,6 +2,7 @@ import { Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/
 import { Router } from '@angular/router';
 import { NavigationPanelComponent } from '../navigation-panel/navigation-panel.component';
 import { FeedSidebarComponent } from './feed-sidebar/feed-sidebar.component';
+import { JobsSidebarComponent } from './jobs-sidebar/jobs-sidebar.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
 import { RefDirective } from './shared/ref.directive';
 
@@ -19,6 +20,7 @@ export class SidebarComponent implements OnInit {
     const profileSidebarFactory = this.resolver.resolveComponentFactory(ProfileSidebarComponent);
     const feedSidebarFactory = this.resolver.resolveComponentFactory(FeedSidebarComponent);
     const navigationSidebarFactory = this.resolver.resolveComponentFactory(NavigationPanelComponent);
+    const jobsSidebarFactory = this.resolver.resolveComponentFactory(JobsSidebarComponent);
     
     if (this.router.url === '/user/profile') {
       this.refDir.containerRef.clear();
@@ -31,6 +33,10 @@ export class SidebarComponent implements OnInit {
     if (this.router.url ==='/user/network') {
       this.refDir.containerRef.clear();
       this.refDir.containerRef.createComponent(navigationSidebarFactory);
+    }
+    if (this.router.url === '/user/jobs') {
+      this.refDir.containerRef.clear();
+      this.refDir.containerRef.createComponent(jobsSidebarFactory);
     }
   }
 }

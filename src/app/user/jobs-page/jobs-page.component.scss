@@ -1,0 +1,78 @@
+@import '../../../styles/_variables.scss';
+
+@import '../../../styles/filter.scss';
+@import '../../../styles/buttons.scss';
+@import '../../../styles/mixins';
+
+.jobs {
+  &__container {
+    display: flex;
+  }
+  &__wrapper {
+    flex: 2 1 70%;
+  }
+  &__sidebar {
+    margin-left: 40px;
+    flex: 2 1 25%;
+  }
+  &__card {
+    @include blockMainStyle;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    justify-content: space-between;
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      //flex: 1 2 30%;
+    }
+    &__img-wrapper {
+      width: 54px;
+      height: 54px;
+      margin-right: 16px;
+      //margin-top: 20px;
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+    &__text-wrapper {
+      padding-right: 150px;
+    }
+    &__title-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      p + p {
+        margin-left: 10px;
+      }
+    }
+    &__position {
+      font-size: $text-size-md;
+      font-weight: bold;
+      margin: 0;
+    }
+    &__place {
+      font-size: $text-size-very-sm;
+      margin: 0;
+    }
+    &__company {
+      font-size: $text-size-very-sm;
+      margin: 0; 
+    }
+    &__description {
+      font-size: $text-size-small;
+    }
+  }
+  &__button {
+    min-width: 8.5em !important;
+  }
+}
+
+.filter__select__trigger {
+  span {
+    color: #181818;
+  }
+}

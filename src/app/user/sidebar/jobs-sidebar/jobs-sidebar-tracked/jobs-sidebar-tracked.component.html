@@ -1,0 +1,22 @@
+<div class="jobs-sidebar-tracked">
+  <div class="jobs-sidebar-tracked__container">
+    <div class="jobs-sidebar-tracked__title-container">
+      <div>
+        <h3 class="jobs-sidebar-tracked__title">Tracked jobs</h3>
+      </div>
+    </div>
+    <div *ngFor="let trackedJob of trackedsJobs">
+      <div class="tracked-card">
+        <div class="tracked-card__container">
+          <div class="tracked-card__img_wrapper">
+            <img src="{{trackedJob.avatar}}" alt="">
+          </div>
+          <div class="tracked-card__text-wrapper">
+            <h3>{{trackedJob.position}}</h3>
+            <p>{{trackedJob.place}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

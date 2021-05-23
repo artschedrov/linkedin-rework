@@ -4,7 +4,7 @@ export const INVITATIONS: Invitation[] = [
   {
     userName: "Brandon Wilson",
     profession: "Senior UX designer",
-    userPic: "../../../../assets/img/PhotoV4.png",
+    userPic: "../../../../assets/img/PhotoV3.png",
     countConnections: 623,
     message: "Hey, I saw your works. I like it! Can we do something together? Or maybe you have project for UX at the moment?"
   },
@@ -20,25 +20,25 @@ export const RECENTS: Invitation[] = [
   {
     userName: "Audrey Alexander",
     profession: "Team lead at Google",
-    userPic: "",
+    userPic: "../../../../assets/img/PhotoV5.png",
     date: ""
   },
   {
     userName: "Kyle Fisher",
     profession: "Product designer at Commandor Corp",
-    userPic: "",
+    userPic: "../../../../assets/img/PhotoV3.png",
     date: ""
   },
   {
     userName: "Darlene Black",
     profession: "HR-manager, 10 000 connections",
-    userPic: "",
+    userPic: "../../../../assets/img/PhotoV1.png",
     date: ""
   },
   {
     userName: "Eduardo Russell",
     profession: "Full stack developer at Yandex",
-    userPic: "",
+    userPic: "../../../../assets/img/PhotoV6.png",
     date: ""
   }
 ]

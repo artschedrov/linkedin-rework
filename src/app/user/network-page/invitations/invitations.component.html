@@ -2,18 +2,32 @@
   <mat-tab label="Received">
     <div class="tabs__tab-item">
       <div class="filter">
-      <p class="filter__select__trigger"><span>You have </span> <span>{{invitations.length}}</span> New connections</p>
+      <p class="filter__select__trigger"><span>You have </span><span> {{invitations.length}} </span> New connections</p>
     </div>
       <div class="new-connections">
         <div class="new-connections__container">
           <div *ngFor="let invitation of invitations" class="new-connections__card">
-            <div>
-              <img src="{{invitation.userPic}}" alt="">
-              <div>{{invitation.userName}}</div>
-              <div>{{invitation.profession}}</div>
-              <p>{{invitation.message}}</p>
-              <button>Accept</button>
-              <button>Decline</button>
+            <div class="invitations-card">
+              <div class="invitations-card__container">
+                <div class="invitations-card__img-wrapper">
+                  <img src="{{invitation.userPic}}" alt="">
+                </div>
+                <div class="invitations-card__text-wrapper">
+                  <h3>{{invitation.userName}}</h3>
+                  <p>{{invitation.profession}}</p>
+                </div>
+                <div class="invitations-card__message-wrapper" [ngStyle]="{'visibility':invitation.message === undefined ? 'hidden' : 'visible'}">
+                  <p class="invitations-card__message">{{invitation.message}}</p>
+                </div>
+              </div>
+              <div class="invitations-card__buttons-wrapper">
+                <div>
+                  <button class="button invitations-card__button">Accept</button>
+                </div>
+                <div>
+                  <button class="button button--gray invitations-card__button">Decline</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -23,11 +37,19 @@
           <div class="filter">
             <p class="filter__select__trigger"><span>Recent connections</span></p>
           </div>
-          <div>
-            <div *ngFor="let recent of recents">
-              <img src="{{recent.userPic}}" alt="">
-              <div>{{recent.userName}}</div>
-              <div>{{recent.profession}}</div>
+          <div class="recent__container">
+            <div *ngFor="let recent of recents" class="recent__item">
+              <div class="invitations-card">
+                <div class="invitations-card__container">
+                  <div class="invitations-card__img-wrapper">
+                    <img src="{{recent.userPic}}" alt="">
+                  </div>
+                  <div class="invitations-card__text-wrapper">
+                    <h3>{{recent.userName}}</h3>
+                    <p>{{recent.profession}}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
