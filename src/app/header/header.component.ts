@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SandwitchMenuComponent } from '../user/sandwitch-menu/sandwitch-menu.component';
-import { UserLayoutComponent } from '../user/user-layout/user-layout.component';
-import { Profile, ProfileViews } from '../user/shared/interfaces/profile.interface';
+import { Profile } from '../user/profile-page/shared/profile.model';
 
 @Component({
   selector: 'app-header',
@@ -9,19 +8,10 @@ import { Profile, ProfileViews } from '../user/shared/interfaces/profile.interfa
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
-  user = {
-    firstName: 'Sara',
-    lastName: 'Black',
-    email: '',
-    avatar: '../../assets/user.jpeg',
-    newViews: 32,
-    totalViews: 324,
-  }
-  links = ['/user/feed', '/user/network'];
-  activeLink = this.links[0];
+
   @Input()
   profile!: Profile;
+  
   constructor(private sandwitchMenu: SandwitchMenuComponent) {}
 
   openSandwitchMenu() {

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProfileSidebarRecomended } from 'src/app/user/shared/interfaces/profile.interface';
+import { ProfileSidebarRecomended } from 'src/app/user/profile-page/shared/profile.model';
 
 @Component({
   selector: 'app-recomendation-card',

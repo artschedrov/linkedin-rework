@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Article } from 'src/app/user/shared/interfaces/article.interface';
-import { SidebarService } from 'src/app/user/shared/services/sidebar.service';
+import { Article } from 'src/app/user/sidebar/feed-sidebar/feed-sidebar-articles/shared/article.model';
+import { SidebarService } from 'src/app/user/sidebar/shared/sidebar.service';
 
 @Component({
   selector: 'app-feed-sidebar-articles',

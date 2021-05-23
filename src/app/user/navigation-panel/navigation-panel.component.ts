@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { NavigationService } from '../shared/services/navigation.service';
+import { NavigationService } from './shared/navigation.service';
 
 @Component({
   selector: 'app-navigation-panel',

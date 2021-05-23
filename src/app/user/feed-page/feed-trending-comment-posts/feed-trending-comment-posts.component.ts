@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FeedService } from '../../shared/services/feed.service';
-import { Post } from '../../shared/interfaces/post.interface';
+import { FeedService } from '../shared/feed.service';
+import { Post } from '../shared/post.model';
 
 @Component({
   selector: 'app-feed-trending-comment-posts',

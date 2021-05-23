@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { Profile, ProfileProject } from '../../shared/interfaces/profile.interface';
-import { ProfileService } from '../../shared/services/profile.service';
+import { Profile, ProfileProject } from '../shared/profile.model';
+import { ProfileService } from '../shared/profile.service';
 
 @Component({
   selector: 'app-profile-projects',

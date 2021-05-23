@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Hashtag } from 'src/app/user/shared/interfaces/hashtag.interface';
-import { SidebarService } from 'src/app/user/shared/services/sidebar.service';
+import { Hashtag } from 'src/app/user/sidebar/feed-sidebar/feed-sidebar-articles/shared/hashtag.model';
+import { SidebarService } from 'src/app/user/sidebar/shared/sidebar.service';
 
 @Component({
   selector: 'app-feed-sidebar-hashtags',

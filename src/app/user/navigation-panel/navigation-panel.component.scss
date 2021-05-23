@@ -1,7 +1,7 @@
-@import '../../../../../styles/variables';
-@import '../../../../../styles/fonts';
+@import '../../../styles/variables';
+@import '../../../styles/fonts';
 
-@import '../../../../../styles/mixins';
+@import '../../../styles/mixins';
 
 .navigation-sidebar {
   @include blockMainStyle;

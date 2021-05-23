@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FeedService } from 'src/app/user/shared/services/feed.service';
+import { FeedService } from 'src/app/user/feed-page/shared/feed.service';
 
 @Component({
   selector: 'app-post-card-highrated-post',

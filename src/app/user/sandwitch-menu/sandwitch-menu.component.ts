@@ -33,5 +33,4 @@ export class SandwitchMenuComponent implements OnInit {
     const currentBody = document.getElementsByClassName('body')[0] as HTMLElement;
     currentBody.classList.toggle('body--lock');
   }
-
 }

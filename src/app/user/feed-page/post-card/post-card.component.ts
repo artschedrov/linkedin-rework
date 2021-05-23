@@ -1,7 +1,7 @@
 import { ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { FeedService } from '../../shared/services/feed.service';
-import { Post } from '../../shared/interfaces/post.interface';
+import { FeedService } from '../shared/feed.service';
+import { Post } from '../shared/post.model';
 import { PostCardCommentThisComponent } from './post-card-comment-this/post-card-comment-this.component';
 import { PostCardFirstPostComponent } from './post-card-first-post/post-card-first-post.component';
 import { PostCardHighratedPostComponent } from './post-card-highrated-post/post-card-highrated-post.component';

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationService } from '../shared/services/navigation.service';
+import { NavigationService } from '../navigation-panel/shared/navigation.service';
 
 @Component({
   selector: 'app-network-page',

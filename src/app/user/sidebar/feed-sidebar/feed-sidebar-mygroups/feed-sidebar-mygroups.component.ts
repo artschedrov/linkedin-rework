@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Group } from 'src/app/user/shared/interfaces/group.interface';
-import { SidebarService } from 'src/app/user/shared/services/sidebar.service';
+import { Group } from 'src/app/user/sidebar/feed-sidebar/feed-sidebar-articles/shared/group.model';
+import { SidebarService } from 'src/app/user/sidebar/shared/sidebar.service';
 
 @Component({
   selector: 'app-feed-sidebar-mygroups',

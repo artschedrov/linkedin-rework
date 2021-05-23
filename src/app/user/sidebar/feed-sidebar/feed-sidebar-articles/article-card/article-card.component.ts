@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article } from 'src/app/user/shared/interfaces/article.interface';
+import { Article } from 'src/app/user/sidebar/feed-sidebar/feed-sidebar-articles/shared/article.model';
 
 @Component({
   selector: 'app-article-card',

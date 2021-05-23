@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FeedService } from 'src/app/user/shared/services/feed.service';
-import { Post } from 'src/app/user/shared/interfaces/post.interface';
+import { FeedService } from 'src/app/user/feed-page/shared/feed.service';
+import { Post } from 'src/app/user/feed-page/shared/post.model';
 
 @Component({
   selector: 'app-post-card-likes',

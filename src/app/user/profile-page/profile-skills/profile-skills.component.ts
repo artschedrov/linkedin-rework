@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProfileSkills } from '../../shared/interfaces/profile.interface';
-import { ProfileService } from '../../shared/services/profile.service';
+import { ProfileSkills } from '../shared/profile.model';
+import { ProfileService } from '../shared/profile.service';
 
 @Component({
   selector: 'app-profile-skills',

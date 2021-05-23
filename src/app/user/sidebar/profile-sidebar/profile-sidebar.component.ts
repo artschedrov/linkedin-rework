@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProfileSidebarViews, ProfileSidebarVisitors } from '../../shared/interfaces/profile.interface';
-import { SidebarService } from '../../shared/services/sidebar.service';
+import { ProfileSidebarViews, ProfileSidebarVisitors } from '../../profile-page/shared/profile.model';
+import { SidebarService } from '../shared/sidebar.service';
 
 @Component({
   selector: 'app-profile-sidebar',

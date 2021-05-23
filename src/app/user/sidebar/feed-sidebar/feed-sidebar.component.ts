@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Profile } from '../../shared/interfaces/profile.interface';
-import { ProfileService } from '../../shared/services/profile.service';
-import { SidebarService } from '../../shared/services/sidebar.service';
+import { Profile } from '../../profile-page/shared/profile.model';
+import { ProfileService } from '../../profile-page/shared/profile.service';
+import { SidebarService } from '../shared/sidebar.service';
 
 @Component({
   selector: 'app-feed-sidebar',

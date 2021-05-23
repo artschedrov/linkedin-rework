@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { NavigationPanelComponent } from '../navigation-panel/navigation-panel.component';
 import { FeedSidebarComponent } from './feed-sidebar/feed-sidebar.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
-import { RefDirective } from './ref.directive';
+import { RefDirective } from './shared/ref.directive';
 
 @Component({
   selector: 'app-sidebar',

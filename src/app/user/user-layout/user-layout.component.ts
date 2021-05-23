@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from '../shared/services/auth.service';
-import { Profile, ProfileViews } from '../shared/interfaces/profile.interface';
-import { ProfileService } from '../shared/services/profile.service';
+import { AuthService } from '../shared/auth.service';
+import { Profile, ProfileViews } from '../profile-page/shared/profile.model';
+import { ProfileService } from '../profile-page/shared/profile.service';
 
 @Component({
   selector: 'app-user-layout',
@@ -11,8 +11,10 @@ import { ProfileService } from '../shared/services/profile.service';
   styleUrls: ['./user-layout.component.scss']
 })
 export class UserLayoutComponent implements OnInit {
+  
   profiles$!: Observable<Profile[]>;
   profilesViews$!: Observable<ProfileViews[]>;
+  
   constructor(private router: Router,
     public auth: AuthService, private profilesService: ProfileService) { }
 
