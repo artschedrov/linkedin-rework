@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+import { InvitationService } from '../network-page/invitations/shared/invitations.service';
+import { NetworkService } from '../network-page/shared/network.service';
 import { NavigationService } from './shared/navigation.service';
 
 @Component({
@@ -11,8 +14,13 @@ export class NavigationPanelComponent implements OnInit {
 
   linksIds!: any;
   activeLinkId: any;
+  invitations: any;
 
-  constructor(private navigationService: NavigationService) { }
+  constructor(
+    private networkService: NetworkService, 
+    private invitationsService: InvitationService,
+    private router: Router
+    ) {}
 
   changeTab($event: any, tabName: any) {
     let currentTab;
@@ -36,8 +44,7 @@ export class NavigationPanelComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.linksIds = this.navigationService.getScopeNetworkIds();
-    this.activeLinkId = this.linksIds[1];
+    this.networkService.getNetworkLinks().then( linksIds => this.linksIds = linksIds);
+    this.activeLinkId;
   }
-
 }

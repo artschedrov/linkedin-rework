@@ -1,11 +1,10 @@
 @import '../../../../styles/_variables.scss';
 @import '../../../../styles/buttons.scss';
-@import '../../../../styles/_fonts.scss';
-
 @import '../../../../styles/_mixins.scss';
 
 .profile-info {
   @include blockMainStyle;
+  margin-bottom: 20px;
   &__img {
     width: 100%;
   }
@@ -127,5 +126,17 @@
   }
   &__button + &__button {
     margin-left: 15px;
+  }
+}
+
+::ng-deep {
+  .mat-tab-label-content {
+    text-transform: uppercase !important;
+  }
+  .mat-ripple {
+    @include tabsButton;
+  }
+  .mat-ink-bar {
+    background: #0077B5 !important;
   }
 }

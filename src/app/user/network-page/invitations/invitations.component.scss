@@ -3,11 +3,27 @@
 @import '../../../../styles/fonts';
 @import '../../../../styles/buttons.scss';
 @import '../../../../styles/mixins';
+@import '../../../../styles/tabs.scss';
 
 .new-connections {
   &__card {
     @include blockMainStyle;
     margin-bottom: 10px;
+  }
+}
+
+::ng-deep {
+  .mat-tab-label-content {
+    text-transform: uppercase !important;
+  }
+  .mat-tab-label {
+    min-width: 240px !important;
+  }
+  .mat-ripple {
+    @include tabsButton;
+  }
+  .mat-ink-bar {
+    background: #0077B5 !important;
   }
 }
 

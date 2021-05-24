@@ -1,9 +1,13 @@
 <div class="navigation-sidebar">
   <div class="navigation-sidebar__container">
-    <button class="tabs__tab-button" 
-    *ngFor="let linkId of linksIds" 
-    [class.tabs__tab-button--active]="activeLinkId == linkId" 
-    (click)="changeTab($event, linkId)">{{linkId}}
+    <button class="tabs__tab-button"
+    *ngFor="let linkId of linksIds"
+    (click)="changeTab($event, linkId.id)">
+    <div class="navigation-sidebar__content">
+      <img src="{{linkId.icon}}" alt="">
+      <p>{{linkId.id}}</p>
+    </div>
+    <div>{{linkId.count}}</div>
     </button>
   </div>
 </div>

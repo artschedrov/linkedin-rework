@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../navigation-panel/shared/navigation.service';
+import { NETWORK_MENU_LINK } from './shared/mock-network'
 
 @Component({
   selector: 'app-network-page',
@@ -7,13 +8,10 @@ import { NavigationService } from '../navigation-panel/shared/navigation.service
   styleUrls: ['./network-page.component.scss']
 })
 export class NetworkPageComponent implements OnInit {
-
+  
   constructor(private navigationService: NavigationService) {}
-
-  netWorksIds = ['connections', 'invitations', 'teammates', 'groups', 'pages', 'hashtags']
   
   ngOnInit(): void {
-    this.navigationService.setScopeNetworkIds(this.netWorksIds);
+    //this.navigationService.setScopeNetworkIds(NETWORK_MENU_LINK);
   }
-
 }

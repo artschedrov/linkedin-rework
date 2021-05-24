@@ -17,6 +17,25 @@
   line-height: 150%;
 }
 
+@mixin tabsButton {
+  font-family: Gotham Pro Regular;
+  font-size: $text-size-small;
+  text-transform: uppercase;
+  background: $block-color;
+  border: solid  #E7E7E7 1px;
+  border-bottom: 0;
+  //padding: 1.2em 4em;
+  min-width: 240px;
+  cursor: pointer;
+  //transition: margin-left 0.5s ease-in-out 0.5s;
+  &:first-child {
+    border-radius: 6px 0 0 0;
+  }
+  &:last-child {
+    border-radius: 0 6px 0 0;
+  }
+}
+
 @mixin blockMoreBtnStyle {
   text-decoration: none;
   color: #0275B1;
