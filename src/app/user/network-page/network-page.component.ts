@@ -8,10 +8,10 @@ import { NETWORK_MENU_LINK } from './shared/mock-network'
   styleUrls: ['./network-page.component.scss']
 })
 export class NetworkPageComponent implements OnInit {
+
   
-  constructor(private navigationService: NavigationService) {}
+  constructor() {}
   
   ngOnInit(): void {
-    //this.navigationService.setScopeNetworkIds(NETWORK_MENU_LINK);
   }
 }

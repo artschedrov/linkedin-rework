@@ -15,12 +15,9 @@ export class NavigationPanelComponent implements OnInit {
   linksIds!: any;
   activeLinkId: any;
   invitations: any;
+  link: any;
 
-  constructor(
-    private networkService: NetworkService, 
-    private invitationsService: InvitationService,
-    private router: Router
-    ) {}
+  constructor(private networkService: NetworkService) {}
 
   changeTab($event: any, tabName: any) {
     let currentTab;
@@ -39,12 +36,12 @@ export class NavigationPanelComponent implements OnInit {
 
     if (currentTab) {
       currentTab.classList.add('tabs__tab--active');
+
       $event.currentTarget.className += ' tabs__tab-button--active';
     }
   }
 
   ngOnInit(): void {
-    this.networkService.getNetworkLinks().then( linksIds => this.linksIds = linksIds);
-    this.activeLinkId;
+    this.networkService.getNetworkLinks().then(linksIds => this.linksIds = linksIds);
   }
 }

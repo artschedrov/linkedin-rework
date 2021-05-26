@@ -163,11 +163,7 @@ import { ArticleForUserService } from './sidebar/jobs-sidebar/articles-for-user/
     AuthService, 
     AuthGuard, 
     SandwitchMenuComponent, 
-    InvitationService,
-    JobService,
-    JobsSearchesService,
-    JobsTrackedService,
-    ArticleForUserService
+    InvitationService
   ],
 })
 export class UserModule { }

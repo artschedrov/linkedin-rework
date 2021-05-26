@@ -1,13 +1,17 @@
 <div class="navigation-sidebar">
   <div class="navigation-sidebar__container">
     <button class="tabs__tab-button"
-    *ngFor="let linkId of linksIds"
+    *ngFor="let linkId of linksIds; let i = index"
+    [ngClass]="{'tabs__tab-button--active': i === 1}"
     (click)="changeTab($event, linkId.id)">
     <div class="navigation-sidebar__content">
       <img src="{{linkId.icon}}" alt="">
       <p>{{linkId.id}}</p>
     </div>
-    <div>{{linkId.count}}</div>
+    <div>
+      <span [ngStyle]="{'display':linkId.count === 0 ? 'none' : 'block'}">{{linkId.count}}</span>
+      <img class="tabs__tab__point" src="../../../assets/icons/Rectangle.svg" alt="">
+    </div>
     </button>
   </div>
 </div>

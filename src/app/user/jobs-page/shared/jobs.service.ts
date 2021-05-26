@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { JOBS, NEWJOBS } from './mock-jobs';
 
-@Injectable() 
+@Injectable({providedIn: 'root'}) 
 
 export class JobService {
 

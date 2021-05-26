@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { JOB_SEARCHES } from './mock-jobsSearches';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 
 export class JobsSearchesService {
   getJobSearches() {

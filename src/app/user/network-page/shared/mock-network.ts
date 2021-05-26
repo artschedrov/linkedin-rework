@@ -2,34 +2,34 @@ import { MenuLink } from './network.model';
 
 export const NETWORK_MENU_LINK: MenuLink[] = [
   {
-    icon: '../../../assets/img/link.svg',
+    icon: '../../../assets/icons/link.svg',
     id:'connections',
     count: 1038
   },
   {
-    icon: '../../../assets/img/disc.svg',
+    icon: '../../../assets/icons/disc.svg',
     id:'invitations',
-    count: 1038 
+    count: 2 
   },
   {
-    icon: '../../../assets/img/archive.svg',
+    icon: '../../../assets/icons/archive.svg',
     id:'teammates',
-    count: 1038 
+    count: 0 
   },
   {
-    icon: '../../../assets/img/hash.svg',
+    icon: '../../../assets/icons/usersmini.svg',
     id:'groups',
-    count: 1038 
+    count: 6 
   },
   {
-    icon: '../../../assets/img/hash.svg',
+    icon: '../../../assets/icons/layers.svg',
     id:'pages',
-    count: 1038 
+    count: 28 
   },
   {
     icon: '../../../assets/img/hash.svg',
     id:'hashtags',
-    count: 1038 
+    count: 8 
   },
   
 ]
