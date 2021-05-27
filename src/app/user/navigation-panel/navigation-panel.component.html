@@ -3,7 +3,7 @@
     <button class="tabs__tab-button"
     *ngFor="let linkId of linksIds; let i = index"
     [ngClass]="{'tabs__tab-button--active': i === 1}"
-    (click)="changeTab($event, linkId.id)">
+    (click)="switchNavigationTab($event, linkId.id)">
     <div class="navigation-sidebar__content">
       <img src="{{linkId.icon}}" alt="">
       <p>{{linkId.id}}</p>

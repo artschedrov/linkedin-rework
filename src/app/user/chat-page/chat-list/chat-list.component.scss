@@ -1,0 +1,10 @@
+@import '../../../../styles/tabs.scss';
+
+.tabs {
+  &__tab-button {
+    &--active {
+      opacity: 0.5 !important;
+    }
+  }
+}
+

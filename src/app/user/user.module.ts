@@ -71,6 +71,8 @@ import { ArticlesForUserComponent } from './sidebar/jobs-sidebar/articles-for-us
 import { JobsSearchesService } from './sidebar/jobs-sidebar/jobs-sidebar-searches/shared/jobsSearches.service';
 import { JobsTrackedService } from './sidebar/jobs-sidebar/jobs-sidebar-tracked/shared/jobsTracked.service';
 import { ArticleForUserService } from './sidebar/jobs-sidebar/articles-for-user/shared/articleForUser.service';
+import { ChatListComponent } from './chat-page/chat-list/chat-list.component';
+import { ChatRoomComponent } from './chat-page/chat-room/chat-room.component';
 
 @NgModule({
   declarations: [
@@ -134,6 +136,8 @@ import { ArticleForUserService } from './sidebar/jobs-sidebar/articles-for-user/
     JobsSidebarSearchesComponent,
     JobsSidebarTrackedComponent,
     ArticlesForUserComponent,
+    ChatListComponent,
+    ChatRoomComponent,
   ],
   imports: [
     CommonModule,

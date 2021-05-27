@@ -1,0 +1,15 @@
+@import '../../../styles/tabs.scss';
+
+.chat-page {
+  &__container {
+    display: flex;
+    
+  }
+  &__wrapper {
+    flex: 2 1 70%;
+  }
+  &__sidebar {
+    margin-right: 40px;
+    flex: 2 1 15%;
+  }
+}

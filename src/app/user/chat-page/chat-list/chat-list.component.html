@@ -1,0 +1,17 @@
+<div class="chat-list">
+  <div class="chat-list__container">
+    <div>
+      <h3>Chats</h3>
+    </div>
+    <button class="tabs__tab-button"
+    *ngFor="let chatLink of chatLinks; let i = index"
+    [ngClass]="{'tabs__tab-button--active': i === 0}"
+    (click)="switchChatLink($event, chatLink.id)"
+    >
+    <div>
+      <img src="{{chatLink.userPic}}" alt="">
+    </div>
+      <p>{{chatLink.name}}</p>
+    </button>
+  </div>
+</div>

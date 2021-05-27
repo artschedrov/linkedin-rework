@@ -1,9 +1,19 @@
 <div class="chat-page">
-  <div class="network__sidebar">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="chat-page__wrapper">
-    <p>chat-page works!</p>
+  <div class="chat-page__container">
+    <div class="chat-page__sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="chat-page__wrapper">
+      <div class="tabs__tab"
+      *ngFor="let chatRoom of chatRooms; let i = index"
+      [ngClass]="{'tabs__tab--active': i === 0}"
+      [attr.id]="chatRoom.id"
+      >
+      <app-chat-room
+      [chatRoom]="chatRoom"
+      ></app-chat-room>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -27,7 +27,7 @@ export const NETWORK_MENU_LINK: MenuLink[] = [
     count: 28 
   },
   {
-    icon: '../../../assets/img/hash.svg',
+    icon: '../../../assets/icons/hash.svg',
     id:'hashtags',
     count: 8 
   },
