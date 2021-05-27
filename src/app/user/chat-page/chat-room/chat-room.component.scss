@@ -1,0 +1,47 @@
+@import '../../../../styles/mixins';
+.chat-room {
+  &__container {
+    @include blockMainStyle;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__messages {
+    padding: 0;
+  }
+  &__message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px 22px;
+    &--current-user {
+      align-items: flex-start;
+    }
+  }
+  &__message-container {
+    display: flex;
+  }
+  &__img-container {
+    width: 46px;
+    height: 46px;
+    img {
+      //width: 100%;
+      height: 100%;
+      border-radius: 26px;
+    }
+  }
+  &__text {
+    background: #E9F0F8;
+    min-width: 4.5em;
+    border-radius: 4px;
+    &--current-user {
+      background: #0275B1;
+      color: #fff;
+    }
+  }
+}

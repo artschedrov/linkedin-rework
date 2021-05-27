@@ -1,6 +1,32 @@
-<p>chat-room works!</p>
-<ul>
-  <li
-  *ngFor="let message of messages"
-  >{{message.text}}</li>
-</ul>
+<div class="chat-room">
+  <div class="chat-room__container">
+    <div class="chat-room__header">
+      <div>Chat with <span>{{chatRoom.companion}}</span></div>
+      <div>shared media</div>
+    </div>
+    <ul class="chat-room__messages">
+      <li
+      class="chat-room__message"
+      *ngFor="let message of messages"
+      [attr.data-message-id]="message.id"
+      [ngClass]="{'chat-room__message--current-user':message.currentUser === true}"
+      >
+      <div class="chat-room__message-container">
+        <div 
+        class="chat-room__text"
+        [ngClass]="{'chat-room__text--current-user':message.currentUser === true}"
+        >{{message.text}}</div>
+        <div class="chat-room__img-container">
+          <img 
+          src="{{message.userPic}}" 
+          alt="" 
+          [ngStyle]="{'display':message.currentUser === true ? 'none' : 'block'}"
+          >
+        </div>
+      </div>
+        <div>{{message.time}}</div>
+      </li>
+    </ul>
+    <app-create-message></app-create-message>
+  </div>
+</div>

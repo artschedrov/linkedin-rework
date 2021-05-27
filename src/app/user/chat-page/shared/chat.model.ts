@@ -7,10 +7,7 @@ export interface ChatLink {
 }
 
 export interface ChatRoom {
-  id: string
-  messages?: [
-    { id: string,
-      text: string
-    }
-  ]
+  id: string,
+  companion: string,
+  messages?: any
 }
