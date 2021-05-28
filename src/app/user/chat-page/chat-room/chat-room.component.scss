@@ -1,4 +1,6 @@
 @import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
 .chat-room {
   &__container {
     @include blockMainStyle;
@@ -10,9 +12,27 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    border-bottom: solid 2px #F4F4F4;
+    &__title {
+      font-size: $text-size-small;
+      text-transform: uppercase;
+    }
   }
   &__messages {
     padding: 0;
+    overflow: auto;
+    height: 25em;
+    margin: 0;
+  }
+  &__message-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &--current-user {
+      align-self: flex-start;
+    }
   }
   &__message {
     display: flex;
@@ -29,6 +49,7 @@
   &__img-container {
     width: 46px;
     height: 46px;
+    margin-left: 15px;
     img {
       //width: 100%;
       height: 100%;
@@ -37,11 +58,19 @@
   }
   &__text {
     background: #E9F0F8;
-    min-width: 4.5em;
+    //min-width: 4.5em;
+    max-width: 30.5em;
     border-radius: 4px;
+    font-size: $text-size-md;
+    padding: 12px 20px;
+    line-height: 150%;
     &--current-user {
       background: #0275B1;
       color: #fff;
     }
+  }
+  &__date {
+    font-size: $text-size-very-sm;
+    margin-top: 5px;
   }
 }

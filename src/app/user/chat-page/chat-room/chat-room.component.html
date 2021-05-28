@@ -1,7 +1,7 @@
 <div class="chat-room">
   <div class="chat-room__container">
     <div class="chat-room__header">
-      <div>Chat with <span>{{chatRoom.companion}}</span></div>
+      <div class="chat-room__header__title">Chat with <span>{{chatRoom.companion}}</span></div>
       <div>shared media</div>
     </div>
     <ul class="chat-room__messages">
@@ -12,10 +12,16 @@
       [ngClass]="{'chat-room__message--current-user':message.currentUser === true}"
       >
       <div class="chat-room__message-container">
-        <div 
-        class="chat-room__text"
-        [ngClass]="{'chat-room__text--current-user':message.currentUser === true}"
-        >{{message.text}}</div>
+        <div class="chat-room__message-wrapper">
+          <div 
+          class="chat-room__text"
+          [ngClass]="{'chat-room__text--current-user':message.currentUser === true}"
+          >{{message.text}}
+          </div>
+          <div class="chat-room__date"
+          [ngClass]="{'chat-room__message-wrapper--current-user':message.currentUser === true}"
+          >{{message.time}}</div>
+        </div>
         <div class="chat-room__img-container">
           <img 
           src="{{message.userPic}}" 
@@ -24,7 +30,6 @@
           >
         </div>
       </div>
-        <div>{{message.time}}</div>
       </li>
     </ul>
     <app-create-message></app-create-message>

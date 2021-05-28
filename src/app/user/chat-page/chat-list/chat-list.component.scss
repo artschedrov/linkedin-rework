@@ -1,9 +1,36 @@
 @import '../../../../styles/tabs.scss';
+@import '../../../../styles/mixins';
 
+.chat-list {
+  @include blockMainStyle;
+  //margin-top: 20px;
+  background: #FCFDFD;
+  &__container {
+    @include sidebarContainer;
+    padding: 0;
+  }
+  &__title-container {
+    @include sidebarHeaderContainer;
+    //margin-bottom: 20px;
+    padding: 25px 30px 20px 30px;
+  }
+  &__title {
+    @include blockTitleStyle;
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
 .tabs {
   &__tab-button {
+    width: 100% !important;
+    background: #FCFDFD;
+    border-radius: 0;
     &--active {
-      opacity: 0.5 !important;
+      opacity: 0.3 !important;
+      p {
+        color: #0275B1;
+      }
     }
   }
 }
