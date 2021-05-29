@@ -9,5 +9,7 @@ export interface ChatLink {
 export interface ChatRoom {
   id: string,
   companion: string,
+  lastOnline?: string,
   messages?: any
+  sharedFilesCount?: number
 }

@@ -10,10 +10,19 @@
     [ngClass]="{'tabs__tab-button--active': i === 0}"
     (click)="switchChatLink($event, chatLink.id)"
     >
-    <div>
+    <div class="chat-list__img-wrapper">
       <img src="{{chatLink.userPic}}" alt="">
+      <img 
+      [ngStyle]="{'display':chatLink.online === true ? 'block' : 'none'}"
+      class="status" src="../../../../assets/icons/Ellipse 2.1.svg" alt="">
+      <img 
+      [ngStyle]="{'display':chatLink.online === false ? 'block' : 'none'}"
+      class="status" src="../../../../assets/icons/Ellipse 2.2.svg" alt="">
     </div>
       <p>{{chatLink.name}}</p>
     </button>
+  </div>
+  <div class="chat-list__button-block">
+    <button class="button chat-list__button">start new chat</button>
   </div>
 </div>

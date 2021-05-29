@@ -1,17 +1,17 @@
 @import '../../../../styles/tabs.scss';
 @import '../../../../styles/mixins';
+@import '../../../../styles/buttons.scss';
 
 .chat-list {
-  @include blockMainStyle;
+  &__container {
+    //@include sidebarContainer;
+    @include blockMainStyle;
   //margin-top: 20px;
   background: #FCFDFD;
-  &__container {
-    @include sidebarContainer;
     padding: 0;
   }
   &__title-container {
     @include sidebarHeaderContainer;
-    //margin-bottom: 20px;
     padding: 25px 30px 20px 30px;
   }
   &__title {
@@ -20,18 +20,39 @@
     font-size: 12px;
     text-transform: uppercase;
   }
+  &__button-block {
+    margin-top: 20px;
+    @include sidebarContainer;
+    @include blockMainStyle;
+  }
+  &__button {
+    width: 100%;
+  }
 }
 .tabs {
   &__tab-button {
     width: 100% !important;
     background: #FCFDFD;
     border-radius: 0;
+    position: relative;
     &--active {
-      opacity: 0.3 !important;
       p {
         color: #0275B1;
       }
     }
+    &:hover {
+      opacity: 0.3
+    }
   }
 }
+
+.button {
+  min-width: 20em;
+}
+.status {
+  position: absolute;
+  bottom: 13%;
+  left: 17%;
+}
+
 

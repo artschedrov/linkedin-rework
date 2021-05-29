@@ -1,8 +1,17 @@
 <div class="chat-room">
   <div class="chat-room__container">
     <div class="chat-room__header">
-      <div class="chat-room__header__title">Chat with <span>{{chatRoom.companion}}</span></div>
-      <div>shared media</div>
+      <div class="chat-room__header-wrapper">
+        <div class="chat-room__header__title">Chat with <span>{{chatRoom.companion}}</span></div>
+        <div class="chat-room__header__info" 
+        [ngStyle]="{'display':chatRoom.lastOnline === undefined ? 'none' : 'block'}">Last online {{chatRoom.lastOnline}}</div>
+      </div>
+      <div class="chat-room__shared-files">
+        <div class="chat-room__shared-files__img-wrapper">
+          <img src="../../../../assets/icons/paperclip-blue.svg" alt="">
+        </div>
+        <p class="chat-room__shared-files__count-text">shared media <span>({{chatRoom.sharedFilesCount}})</span> </p>
+      </div>
     </div>
     <ul class="chat-room__messages">
       <li
@@ -18,9 +27,18 @@
           [ngClass]="{'chat-room__text--current-user':message.currentUser === true}"
           >{{message.text}}
           </div>
-          <div class="chat-room__date"
+          <div class="chat-room__message-info__wrapper"
           [ngClass]="{'chat-room__message-wrapper--current-user':message.currentUser === true}"
-          >{{message.time}}</div>
+          >
+            <div [ngStyle]="{'display':message.currentUser === true ? 'block' : 'none'}">
+              <img src="../../../../assets/icons/Read.svg" alt=""
+              [ngStyle]="{'display':message.readAll === true ? 'block' : 'none'}"
+              >
+            </div>
+            <div class="chat-room__date"
+            >{{message.time}}
+            </div>
+          </div>
         </div>
         <div class="chat-room__img-container">
           <img 

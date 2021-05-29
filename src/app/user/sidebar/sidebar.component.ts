@@ -4,6 +4,7 @@ import { ChatListComponent } from '../chat-page/chat-list/chat-list.component';
 import { NavigationPanelComponent } from '../navigation-panel/navigation-panel.component';
 import { FeedSidebarComponent } from './feed-sidebar/feed-sidebar.component';
 import { JobsSidebarComponent } from './jobs-sidebar/jobs-sidebar.component';
+import { NoticeSidebarComponent } from './notice-sidebar/notice-sidebar.component';
 import { ProfileSidebarComponent } from './profile-sidebar/profile-sidebar.component';
 import { RefDirective } from './shared/ref.directive';
 
@@ -23,6 +24,7 @@ export class SidebarComponent implements OnInit {
     const navigationSidebarFactory = this.resolver.resolveComponentFactory(NavigationPanelComponent);
     const jobsSidebarFactory = this.resolver.resolveComponentFactory(JobsSidebarComponent);
     const chatsSidebarFactory = this.resolver.resolveComponentFactory(ChatListComponent);
+    const noticeSidebarFactory = this.resolver.resolveComponentFactory(NoticeSidebarComponent);
     
     if (this.router.url === '/user/profile') {
       this.refDir.containerRef.clear();
@@ -43,6 +45,10 @@ export class SidebarComponent implements OnInit {
     if (this.router.url === '/user/chat') {
       this.refDir.containerRef.clear();
       this.refDir.containerRef.createComponent(chatsSidebarFactory);
+    }
+    if (this.router.url === '/user/notice') {
+      this.refDir.containerRef.clear();
+      this.refDir.containerRef.createComponent(noticeSidebarFactory);
     }
   }
 }

@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProfileSidebarViews } from '../../profile-page/shared/profile.model';
 import { SidebarService } from '../shared/sidebar.service';
 
 @Component({
-  selector: 'app-profile-sidebar',
-  templateUrl: './profile-sidebar.component.html',
-  styleUrls: ['./profile-sidebar.component.scss']
+  selector: 'app-notice-sidebar',
+  templateUrl: './notice-sidebar.component.html',
+  styleUrls: ['./notice-sidebar.component.scss']
 })
-export class ProfileSidebarComponent implements OnInit {
+export class NoticeSidebarComponent implements OnInit {
 
   stats$!: Observable<ProfileSidebarViews[]>;
 
@@ -17,5 +17,7 @@ export class ProfileSidebarComponent implements OnInit {
   ngOnInit(): void {
     let path = '/profileSidebar.json'
     this.stats$ = this.sidebarService.getSideBarInfo(path);
+    console.log(this.stats$);
   }
+
 }

@@ -6,7 +6,6 @@
     @include blockMainStyle;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
     margin-bottom: 10px;
   }
   &__header {
@@ -18,6 +17,42 @@
     &__title {
       font-size: $text-size-small;
       text-transform: uppercase;
+      margin: 0;
+      span {
+        color: #0275B1;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.3
+        }
+      }
+    }
+    &__info {
+      margin-left: 15px;
+      font-size: $text-size-small;
+      line-height: 11px;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+  }
+  &__header-wrapper {
+    display: flex;
+  }
+  &__shared-files {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &__img-wrapper {
+      width: 24px;
+      height: 24px;
+    }
+    &__count-text {
+      font-size: $text-size-small;
+      line-height: 11px;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+    &:hover {
+      opacity: 0.4;
     }
   }
   &__messages {
@@ -43,6 +78,13 @@
       align-items: flex-start;
     }
   }
+  &__message-info {
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
   &__message-container {
     display: flex;
   }
@@ -50,6 +92,7 @@
     width: 46px;
     height: 46px;
     margin-left: 15px;
+    cursor: pointer;
     img {
       //width: 100%;
       height: 100%;
@@ -71,6 +114,6 @@
   }
   &__date {
     font-size: $text-size-very-sm;
-    margin-top: 5px;
+    opacity: 0.6;
   }
 }
