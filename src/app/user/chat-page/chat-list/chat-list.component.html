@@ -19,7 +19,10 @@
       [ngStyle]="{'display':chatLink.online === false ? 'block' : 'none'}"
       class="status" src="../../../../assets/icons/Ellipse 2.2.svg" alt="">
     </div>
+    <div class="chat-list__info-wrapper">
       <p>{{chatLink.name}}</p>
+      <p class="chat-list__last-message">{{chatLink.lastMessage}}</p>
+    </div>
     </button>
   </div>
   <div class="chat-list__button-block">

@@ -3,29 +3,44 @@
     <app-sidebar></app-sidebar>
   </div>
   <div class="notice__wrapper">
-    <div class="notice__recent">
-      <div class="filter">
-        <p class="filter__select__trigger">Recent</p>
-      </div>
-      <div class="notice__recent__container">
-        <div>
-          <div class="notice-card">
-            <div class="notice-card__container">
-              <div class="notice-card__img-wrapper">
-                <img src="../../../assets/img/Photo1.png" alt="">
+    <div id="notifications" class="tabs__tab tabs__tab--active">
+      <div class="notice__recent">
+        <div class="filter">
+          <p class="filter__select__trigger">Recent</p>
+        </div>
+        <div class="notice__recent__container">
+          <div>
+            <div class="notice-card">
+              <div class="notice-card__container">
+                <div class="notice-card__img-container">
+                  <div class="notice-card__img-wrapper"
+                  *ngFor="let noticeSearch of noticeSearches; let i = index"
+                  [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                  >
+                    <img src="{{noticeSearch.pic}}" 
+                    alt="">
+                  </div>
+                </div>
+                <div class="notice-card__text-wrapper">
+                  <p>You appeared in <span>{{noticeSearches.length}}</span> searches this week</p>
+                </div>
               </div>
-              <div class="notice-card__text-wrapper">
-                <p>You appeared in 9 searches this week</p>
-              </div>
+              <button class="notice-card__button-more">
+                <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="notice__recent">
-      <div class="filter">
-        <p class="filter__select__trigger">Earler</p>
+      <div class="notice__recent">
+        <div class="filter">
+          <p class="filter__select__trigger">Earler</p>
+        </div>
       </div>
+    </div>
+    <div id="notifications-settings" class="tabs__tab">
+      <p>Settings</p>
+      <p>Пока ничего нет</p>
     </div>
   </div>
 </div>

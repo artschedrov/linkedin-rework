@@ -40,7 +40,7 @@
       </div>
     </div>  
   </div>
-  <div class="post-card__wrapper-link" [ngStyle]="{'display':post.description.length < 100 ? 'none' : 'block'}">
+  <div class="post-card__wrapper-link" [ngStyle]="{'display':post.description.length >= 100 ? 'none' : 'block'}">
     <a class="post-card__link" href="#">read more</a>
   </div>
   <div class="post-card__footer">

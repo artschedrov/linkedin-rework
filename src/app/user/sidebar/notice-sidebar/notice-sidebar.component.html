@@ -1,4 +1,5 @@
 <div *ngIf="stats$ | async as stats">
+  <app-notice-navigation></app-notice-navigation>
   <app-profile-sidebar-stats
   *ngFor="let stat of stats"
   [stat]="stat"

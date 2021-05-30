@@ -19,5 +19,4 @@ export class NoticeSidebarComponent implements OnInit {
     this.stats$ = this.sidebarService.getSideBarInfo(path);
     console.log(this.stats$);
   }
-
 }

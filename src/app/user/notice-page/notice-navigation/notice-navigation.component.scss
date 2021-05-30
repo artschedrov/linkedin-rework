@@ -1,0 +1,25 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/fonts';
+@import '../../../../styles/tabs.scss';
+@import '../../../../styles/mixins';
+
+.notice-navigation {
+  @include blockMainStyle;
+  background: none;
+  margin-bottom: 20px;
+  &__container {
+    @include sidebarContainer;
+    padding: 25px 0;
+    border-radius: 4px;
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.tabs {
+  &__tab-button {
+    width: 100% !important;
+  }
+}

@@ -1,10 +1,12 @@
 @import '../../../styles/_variables.scss';
 @import '../../../styles/_fonts.scss';
 @import '../../../styles/filter.scss';
+@import '../../../styles/tabs.scss';
 
 .notice {
   &__container {
     display: flex;
+    
     
   }
   &__wrapper {
@@ -12,10 +14,63 @@
   }
   &__sidebar {
     margin-right: 40px;
-    flex: 2 1 15%;
+    flex: 2 1 25%;
   }
 }
 
-.filter__select__trigger {
-  color: #181818;
+.notice-card {
+  background: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  &__container {
+    display: flex;
+  }
+  &__img-container {
+    display: flex;
+    position: relative;
+  }
+  &__img-wrapper {
+    width: 32px;
+    height: 32px;
+    //position: absolute;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+  &__text-wrapper {
+    margin-left: 10px;
+    p {
+      font-size: $text-size-md;
+      line-height: 150%;
+      margin: 0;
+    }
+  }
+  &__button-more {
+    height: 2.2rem;
+    width: 2.2rem;
+    min-width: auto;
+    background: $block-color;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+}
+
+.filter {
+  margin: 0;
+  &__select__trigger {
+    color: #181818;
+  }
+}
+
+.tabs {
+  &__tab {
+    margin: 0 !important;
+  }
 }

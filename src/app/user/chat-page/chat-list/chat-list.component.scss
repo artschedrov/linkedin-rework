@@ -1,6 +1,7 @@
 @import '../../../../styles/tabs.scss';
 @import '../../../../styles/mixins';
 @import '../../../../styles/buttons.scss';
+@import '../../../../styles/variables';
 
 .chat-list {
   &__container {
@@ -20,6 +21,22 @@
     font-size: 12px;
     text-transform: uppercase;
   }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+  }
+  &__last-message {
+    font-size: $text-size-very-sm;
+    text-transform: none;
+    word-wrap: break-word;
+    padding-top: 5px;
+
+  }
   &__button-block {
     margin-top: 20px;
     @include sidebarContainer;
@@ -35,6 +52,7 @@
     background: #FCFDFD;
     border-radius: 0;
     position: relative;
+    justify-content: start;
     &--active {
       p {
         color: #0275B1;
