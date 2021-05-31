@@ -119,3 +119,33 @@
   transform: rotate(-135deg);
   background-color: #0275B1;
 }
+
+.filter {
+  width:100%;
+  text-align:center; 
+  position: relative;
+  &__select__trigger {
+  color: #0275B1;
+  position:relative; 
+  padding:10px; 
+  background: #F7F9FB;
+  display: inline-block;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: $text-size-small;
+  margin: 35px 0;
+  span {
+    color: #181818;
+  }
+  }
+  &::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #E7E7E7;
+    z-index:0;
+  }
+}

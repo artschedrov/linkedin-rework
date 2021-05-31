@@ -17,6 +17,5 @@ export class NoticeSidebarComponent implements OnInit {
   ngOnInit(): void {
     let path = '/profileSidebar.json'
     this.stats$ = this.sidebarService.getSideBarInfo(path);
-    console.log(this.stats$);
   }
 }

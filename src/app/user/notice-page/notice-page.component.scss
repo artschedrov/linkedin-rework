@@ -2,6 +2,7 @@
 @import '../../../styles/_fonts.scss';
 @import '../../../styles/filter.scss';
 @import '../../../styles/tabs.scss';
+@import '../../../styles/mixins';
 
 .notice {
   &__container {
@@ -19,11 +20,18 @@
 }
 
 .notice-card {
-  background: #fff;
+  @include blockMainStyle;
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+  max-height: 78px;
   &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__wrapper {
     display: flex;
   }
   &__img-container {
@@ -33,19 +41,40 @@
   &__img-wrapper {
     width: 32px;
     height: 32px;
-    //position: absolute;
     cursor: pointer;
     img {
       width: 100%;
     }
   }
   &__text-wrapper {
-    margin-left: 10px;
-    p {
-      font-size: $text-size-md;
-      line-height: 150%;
-      margin: 0;
-    }
+    margin-left: 12px;
+    position: relative;
+  }
+  &__text-info {
+    font-size: $text-size-md;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    //white-space: nowrap;
+    line-clamp: 1;
+    //display: box;
+    word-wrap: break-word;
+    //width: 90%;
+    // &::after {
+    // content: "";
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // width: 15%; /* 1 */
+    // height: 100%;
+    // background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); /* 2 */
+    // }
+  } 
+  &__term {
+    font-size: $text-size-very-sm;
+    line-height: 150%;
+    margin: 0;
+    margin-top: 5px;
   }
   &__button-more {
     height: 2.2rem;
@@ -56,6 +85,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    white-space: nowrap;
     &:hover {
       opacity: 0.3;
     }
@@ -63,14 +93,39 @@
 }
 
 .filter {
-  margin: 0;
+  width:100%;
+  text-align:center; 
+  position: relative;
   &__select__trigger {
-    color: #181818;
+  color: #181818;
+  position:relative; 
+  padding:10px; 
+  background: #F7F9FB;
+  display: inline-block;
+  z-index: 1;
+  }
+  &::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #E7E7E7;
+    z-index:0;
   }
 }
 
 .tabs {
   &__tab {
     margin: 0 !important;
+  }
+}
+
+b {
+  color: #0275B1;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
   }
 }

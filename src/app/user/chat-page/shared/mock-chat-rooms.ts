@@ -36,7 +36,16 @@ export const CHAT_ROOMS: ChatRoom[] = [
         userPic: '../../../../assets/img/PhotoV1.png',
         text: 'Lorem ipsum dolor sit amet.',
         currentUser: false
-      }
+      },
+      {
+        id: '55555',
+        author: 'Sara Black',
+        userPic: '../../../../assets/user.jpeg',
+        text: 'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        time: '9:49 PM',
+        currentUser: true,
+        readAll: true,
+      },
     ],
     sharedFilesCount: 12
   },

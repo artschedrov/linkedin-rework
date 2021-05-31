@@ -9,32 +9,133 @@
           <p class="filter__select__trigger">Recent</p>
         </div>
         <div class="notice__recent__container">
-          <div>
+          <div class="notice__recent__searches">
             <div class="notice-card">
               <div class="notice-card__container">
-                <div class="notice-card__img-container">
-                  <div class="notice-card__img-wrapper"
-                  *ngFor="let noticeSearch of noticeSearches; let i = index"
-                  [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
-                  >
-                    <img src="{{noticeSearch.pic}}" 
-                    alt="">
+                <div class="notice-card__wrapper">
+                  <div class="notice-card__img-container">
+                    <div class="notice-card__img-wrapper"
+                    *ngFor="let noticeSearch of noticeSearches; let i = index"
+                    [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                    >
+                      <img src="{{noticeSearch.pic}}" 
+                      alt="">
+                    </div>
+                  </div>
+                  <div class="notice-card__text-wrapper">
+                    <p class="notice-card__text-info"><b>You appeared in <span>{{noticeSearches.length}} </span>searches</b> this week</p>
+                    <p class="notice-card__term">3 hours</p>
                   </div>
                 </div>
-                <div class="notice-card__text-wrapper">
-                  <p>You appeared in <span>{{noticeSearches.length}}</span> searches this week</p>
-                </div>
+                <button class="notice-card__button-more">
+                  <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+                </button>
               </div>
-              <button class="notice-card__button-more">
-                <img src="../../../../assets/icons/more-horizontal.svg" alt="">
-              </button>
+            </div>
+          </div>
+          <div class="notice__recent__viewed">
+            <div class="notice-card">
+              <div class="notice-card__container">
+                <div class="notice-card__wrapper">
+                  <div class="notice-card__img-container">
+                    <div class="notice-card__img-wrapper"
+                    *ngFor="let noticeViewed of noticeViewedAll; let i = index"
+                    [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                    >
+                      <img src="{{noticeViewed.pic}}" 
+                      alt="">
+                    </div>
+                  </div>
+                  <div class="notice-card__text-wrapper">
+                    <p class="notice-card__text-info">{{noticeViewedAll[0].name}} and <span>{{noticeViewedAll.length}}</span> others <b>viewed your profile</b></p>
+                    <p class="notice-card__term">9 hours</p>
+                  </div>
+                </div>
+                <button class="notice-card__button-more">
+                  <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="notice__recent__linked">
+            <div class="notice-card">
+              <div class="notice-card__container">
+                <div class="notice-card__wrapper"> 
+                  <div class="notice-card__img-container">
+                    <div class="notice-card__img-wrapper"
+                    *ngFor="let noticeLiked of noticeLikedAll; let i = index"
+                    [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                    >
+                      <img src="{{noticeLiked.pic}}" 
+                      alt="">
+                    </div>
+                  </div>
+                  <div class="notice-card__text-wrapper">
+                    <p class="notice-card__text-info">{{noticeLikedAll[0].name}} and <span>{{noticeLikedAll.length}}</span> others <b>liked your post «1,000 connections! My network growth, so many»</b></p>
+                    <p class="notice-card__term">9 hours</p>
+                  </div>
+                </div>
+                <button class="notice-card__button-more">
+                  <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+                </button> 
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="notice__recent">
+      <div class="notice__earler">
         <div class="filter">
           <p class="filter__select__trigger">Earler</p>
+        </div>
+        <div class="notice__recent__container">
+          <div class="notice__recent__searches">
+            <div class="notice-card">
+              <div class="notice-card__container">
+                <div class="notice-card__wrapper">
+                  <div class="notice-card__img-container">
+                    <div class="notice-card__img-wrapper"
+                    *ngFor="let noticeInterested of noticeInterestedAll; let i = index"
+                    [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                    >
+                      <img src="{{noticeInterested.pic}}" 
+                      alt="">
+                    </div>
+                  </div>
+                  <div class="notice-card__text-wrapper">
+                    <p class="notice-card__text-info">We found jobs that you may be interested</p>
+                    <p class="notice-card__term">3 hours</p>
+                  </div>
+                </div>
+                <button class="notice-card__button-more">
+                  <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="notice__recent__viewed">
+            <div class="notice-card">
+              <div class="notice-card__container">
+                <div class="notice-card__wrapper">
+                  <div class="notice-card__img-container">
+                    <div class="notice-card__img-wrapper"
+                    *ngFor="let noticeViewed of noticeViewedAll; let i = index"
+                    [ngStyle]="{'display': i >= 3 ? 'none' : 'block'}"
+                    >
+                      <img src="{{noticeViewed.pic}}" 
+                      alt="">
+                    </div>
+                  </div>
+                  <div class="notice-card__text-wrapper">
+                    <p class="notice-card__text-info">{{noticeViewedAll[0].name}} and <span>{{noticeViewedAll.length}}</span> others <b>viewed your profile</b></p>
+                    <p class="notice-card__term">9 hours</p>
+                  </div>
+                </div>
+                <button class="notice-card__button-more">
+                  <img src="../../../../assets/icons/more-horizontal.svg" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
