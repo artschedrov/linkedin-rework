@@ -155,13 +155,13 @@ import { NoticeNavigationComponent } from './notice-page/notice-navigation/notic
       {
         path: '', component: UserLayoutComponent, children: [
           {path: '', redirectTo: '/user/profile', pathMatch: 'full'},
-          {path: 'login', component: LoginPageComponent},
-          {path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard]},
-          {path: 'feed', component: FeedPageComponent, canActivate: [AuthGuard]},
-          {path: 'network', component: NetworkPageComponent, canActivate: [AuthGuard]},
-          {path: 'jobs', component: JobsPageComponent, canActivate: [AuthGuard]},
-          {path: 'chat', component: ChatPageComponent, canActivate: [AuthGuard]},
-          {path: 'notice', component: NoticePageComponent, canActivate: [AuthGuard]}
+          // {path: 'login', component: LoginPageComponent},
+          {path: 'profile', component: ProfilePageComponent},
+          {path: 'feed', component: FeedPageComponent},
+          {path: 'network', component: NetworkPageComponent},
+          {path: 'jobs', component: JobsPageComponent},
+          {path: 'chat', component: ChatPageComponent},
+          {path: 'notice', component: NoticePageComponent}
         ]
       }
     ])
