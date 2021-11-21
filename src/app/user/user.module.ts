@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {CanActivate, RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FeedPageComponent } from './feed-page/feed-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { ProfileInfoComponent } from './profile-page/profile-info/profile-info.component';
@@ -82,7 +81,6 @@ import { NoticeNavigationComponent } from './notice-page/notice-navigation/notic
     HeaderComponent,
     FooterComponent,
     UserLayoutComponent,
-    LoginPageComponent,
     ProfilePageComponent,
     ProfileInfoComponent,
     ProfileAboutComponent,

@@ -13,16 +13,6 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
 
   getProfileInfo() {
-    // return this.http.get(`${environment.fireBaseUrl}/profiles.json`)
-    // .pipe(
-    //   map((response: {[key: string]: any}) => {
-    //   return Object
-    //   .keys(response)
-    //   .map(key => ({
-    //     ...response[key],
-    //     id:key
-    //   }));
-    // }));
     return Promise.resolve(PROFILE);
   }
 
