@@ -1,5 +1,5 @@
 <header class="header__layout">
-    <ng-container *ngIf="profiles$ | async as profiles">
+    <ng-container>
       <app-header routerLinkActive="active" *ngFor="let profile of profiles"
     [profile]="profile"
       ></app-header>
