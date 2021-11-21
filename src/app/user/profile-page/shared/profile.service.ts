@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {Profile, ProfileEducation, ProfileExperience, ProfileProject, ProfileSkills} from './profile.model';
 import {environment} from '../../../../environments/environment';
 import {map} from 'rxjs/operators';
+import { PROFILE } from './mock-profile';
 
 @Injectable({providedIn: 'root'})
 
@@ -11,17 +12,18 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {}
 
-  getProfileInfo(): Observable<Profile[]> {
-    return this.http.get(`${environment.fireBaseUrl}/profiles.json`)
-    .pipe(
-      map((response: {[key: string]: any}) => {
-      return Object
-      .keys(response)
-      .map(key => ({
-        ...response[key],
-        id:key
-      }));
-    }));
+  getProfileInfo() {
+    // return this.http.get(`${environment.fireBaseUrl}/profiles.json`)
+    // .pipe(
+    //   map((response: {[key: string]: any}) => {
+    //   return Object
+    //   .keys(response)
+    //   .map(key => ({
+    //     ...response[key],
+    //     id:key
+    //   }));
+    // }));
+    return Promise.resolve(PROFILE);
   }
 
   getProfileProjects(): Observable<ProfileProject[]> {

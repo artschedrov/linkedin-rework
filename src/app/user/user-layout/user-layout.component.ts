@@ -12,14 +12,15 @@ import { ProfileService } from '../profile-page/shared/profile.service';
 })
 export class UserLayoutComponent implements OnInit {
   
-  profiles$!: Observable<Profile[]>;
+  profiles: Profile[] = [];
   profilesViews$!: Observable<ProfileViews[]>;
   
   constructor(private router: Router,
     public auth: AuthService, private profilesService: ProfileService) { }
 
   ngOnInit(){
-    this.profiles$ = this.profilesService.getProfileInfo();
+    //this.profiles$ = this.profilesService.getProfileInfo();
+    this.profilesService.getProfileInfo().then(profiles => this.profiles = profiles);
   }
 
   logOut(event: Event) {

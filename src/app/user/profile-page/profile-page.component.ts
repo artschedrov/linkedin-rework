@@ -11,7 +11,7 @@ import { ProfileService } from './shared/profile.service';
 
 export class ProfilePageComponent implements OnInit {
 
-  profiles$!: Observable<Profile[]>;
+  profiles: Profile[] = [];
   
   constructor(private profilesService: ProfileService) { }
 
@@ -37,7 +37,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.profiles$ = this.profilesService.getProfileInfo();
+    this.profilesService.getProfileInfo().then(profiles => this.profiles = profiles);
     
   }
 }
