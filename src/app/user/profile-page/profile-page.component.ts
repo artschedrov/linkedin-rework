@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Profile } from './shared/profile.model';
 import { ProfileService } from './shared/profile.service';
 
