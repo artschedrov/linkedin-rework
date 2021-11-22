@@ -3,8 +3,3 @@ export interface User {
   password: string;
   returnSecureToken?: boolean;
 }
-
-export interface FbAuthResponse {
-  idToken: string,
-  expiresIn: number
-}
