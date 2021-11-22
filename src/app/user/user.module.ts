@@ -14,9 +14,7 @@ import { ProfileSkillsComponent } from './profile-page/profile-skills/profile-sk
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
-import { AuthService } from './shared/auth.service';
 import { SharedModule } from '../shared/shared.module';
-import { AuthGuard } from './shared/auth.guard';
 import { ProfileProjectComponent } from './profile-page/profile-projects/profile-project/profile-project.component';
 import { ProfileSkillCardComponent } from './profile-page/profile-skills/profile-skill-card/profile-skill-card.component';
 import { ProfileExperienceCardComponent } from './profile-page/profile-experience/profile-experience-card/profile-experience-card.component';
@@ -63,13 +61,9 @@ import { NavigationPanelComponent } from './navigation-panel/navigation-panel.co
 import { InvitationService } from './network-page/invitations/shared/invitations.service';
 import { JobsSidebarComponent } from './sidebar/jobs-sidebar/jobs-sidebar.component';
 import { JobsSearchComponent } from './jobs-page/jobs-search/jobs-search.component';
-import { JobService } from './jobs-page/shared/jobs.service';
 import { JobsSidebarSearchesComponent } from './sidebar/jobs-sidebar/jobs-sidebar-searches/jobs-sidebar-searches.component';
 import { JobsSidebarTrackedComponent } from './sidebar/jobs-sidebar/jobs-sidebar-tracked/jobs-sidebar-tracked.component';
 import { ArticlesForUserComponent } from './sidebar/jobs-sidebar/articles-for-user/articles-for-user.component';
-import { JobsSearchesService } from './sidebar/jobs-sidebar/jobs-sidebar-searches/shared/jobsSearches.service';
-import { JobsTrackedService } from './sidebar/jobs-sidebar/jobs-sidebar-tracked/shared/jobsTracked.service';
-import { ArticleForUserService } from './sidebar/jobs-sidebar/articles-for-user/shared/articleForUser.service';
 import { ChatListComponent } from './chat-page/chat-list/chat-list.component';
 import { ChatRoomComponent } from './chat-page/chat-room/chat-room.component';
 import { CreateMessageComponent } from './chat-page/create-message/create-message.component';
@@ -153,7 +147,6 @@ import { NoticeNavigationComponent } from './notice-page/notice-navigation/notic
       {
         path: '', component: UserLayoutComponent, children: [
           {path: '', redirectTo: '/user/profile', pathMatch: 'full'},
-          // {path: 'login', component: LoginPageComponent},
           {path: 'profile', component: ProfilePageComponent},
           {path: 'feed', component: FeedPageComponent},
           {path: 'network', component: NetworkPageComponent},
@@ -168,8 +161,6 @@ import { NoticeNavigationComponent } from './notice-page/notice-navigation/notic
     RouterModule
   ],
   providers: [
-    AuthService, 
-    AuthGuard, 
     SandwitchMenuComponent, 
     InvitationService
   ],
