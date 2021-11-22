@@ -1,4 +1,4 @@
-import { Profile } from "./profile.model";
+import { Profile, ProfileProject } from "./profile.model";
 
 export const PROFILE: Profile[] = [
   {
@@ -16,5 +16,29 @@ export const PROFILE: Profile[] = [
       newViews: 24
     },
     projectCount: 12
+  }
+]
+
+export const PROFILE_PROJECTS: ProfileProject[] = [
+  {
+    id: 1234,
+    name: 'Zara redesign concept',
+    type: 'UX/UI design',
+    date: '15.07.2019',
+    preview: 'assets/img/project1.png' 
+  },
+  {
+    id: 12332,
+    name: 'SCTHON event brand identity',
+    type: 'UX/UI design',
+    date: '03.31.2019',
+    preview: 'assets/img/project2.png'
+  },
+  {
+    id: 1234,
+    name: 'Drozd. Brand identity',
+    type: 'Graphic design',
+    date: '15.07.2019',
+    preview: 'assets/img/project3.png'
   }
 ]

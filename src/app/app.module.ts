@@ -9,12 +9,6 @@ import { ProfileSidebarComponent } from './user/sidebar/profile-sidebar/profile-
 import { UserModule } from './user/user.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// const INTERCEPTOR_PROVIDER: Provider = {
-//   provide: HTTP_INTERCEPTORS,
-//   multi: true,
-//   useClass: AuthInterceptor
-// };
-
 @NgModule({
   declarations: [
     AppComponent,

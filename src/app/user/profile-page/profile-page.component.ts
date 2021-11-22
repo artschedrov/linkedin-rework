@@ -36,7 +36,6 @@ export class ProfilePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.profilesService.getProfileInfo().then(profiles => this.profiles = profiles);
-    
+    this.profilesService.getProfileInfo().then(profiles => this.profiles = profiles);    
   }
 }

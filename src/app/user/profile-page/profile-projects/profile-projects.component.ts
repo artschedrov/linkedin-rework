@@ -9,13 +9,13 @@ import { ProfileService } from '../shared/profile.service';
   styleUrls: ['./profile-projects.component.scss']
 })
 export class ProfileProjectsComponent implements OnInit {
-  projects$!: Observable<ProfileProject[]>;
+  projects: ProfileProject[] = [];
   @Input()
   profile!: Profile;
   constructor(private profilesService: ProfileService) { }
 
   ngOnInit(): void {
-    this.projects$ = this.profilesService.getProfileProjects();
+    this.profilesService.getProfileProjects().then(projects => this.projects = projects);
   }
 
 }
