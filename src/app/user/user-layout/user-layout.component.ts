@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Profile, ProfileViews } from '../profile-page/shared/profile.model';
-import { ProfileService } from '../profile-page/shared/profile.service';
+import { Profile, ProfileViews } from '../profile/shared/profile.model';
+import { ProfileService } from '../profile/shared/profile.service';
 
 @Component({
   selector: 'app-user-layout',

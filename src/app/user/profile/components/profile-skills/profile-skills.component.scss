@@ -1,0 +1,39 @@
+@import '../../../../../styles/_variables.scss';
+@import '../../../../../styles/_fonts.scss';
+
+@import '../../../../../styles/_mixins.scss';
+
+.profile-skills {
+  @include blockMainStyle;
+  margin-top: 20px;
+  &__container {
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include blockTitleStyle;
+    line-height: 17px;
+    span {
+      color: #747474;
+    }
+  }
+  &__skills-list {
+    display: flex;
+  }
+  &__skills-item {
+    cursor: pointer;
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+  &__skills-item + &__skills-item {
+    padding-left: 20px;
+  }
+  &__wrapper-link {
+    margin-top: 25px;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+}
