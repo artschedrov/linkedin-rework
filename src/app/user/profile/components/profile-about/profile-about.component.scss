@@ -1,0 +1,21 @@
+@import '../../../../../styles/_variables.scss';
+@import '../../../../../styles/buttons.scss';
+@import '../../../../../styles/_fonts.scss';
+
+@import '../../../../../styles/_mixins.scss';
+
+.profile-about {
+  @include blockMainStyle;
+  &__container {
+    padding: 60px 30px;
+  }
+  &__title {
+    @include blockTitleStyle;
+  }
+  &__text {
+    @include blockTextStyle;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+}

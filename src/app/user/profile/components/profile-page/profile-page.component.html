@@ -1,0 +1,40 @@
+<div class="profile__container">
+  <div class="profile__wrapper">
+    <app-profile-info
+    *ngFor="let profile of profiles"
+    [profile]="profile"
+    ></app-profile-info>
+    <mat-tab-group animationDuration="0ms">
+      <mat-tab label="Profile" class="profile__tab-button">
+        <div class="tabs__tab-item">
+          <app-profile-about
+            *ngFor="let profile of profiles"
+            [profile]="profile"
+          ></app-profile-about>
+          <app-profile-projects
+            *ngFor="let profile of profiles"
+            [profile]="profile"
+          ></app-profile-projects>
+          <app-profile-skills></app-profile-skills>
+          <app-profile-experience></app-profile-experience>
+          <app-profile-education></app-profile-education>
+        </div>
+      </mat-tab>
+      <mat-tab label="Activity & interests">
+        <div class="tabs__tab-item">
+          <h2>Здесь пока ничего нет</h2>
+        </div>
+      </mat-tab>
+      <mat-tab label="Articles (3)">
+        <div class="tabs__tab-item">
+          <h2>Здесь пока ничего нет</h2>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    
+  </div>
+  <div class="profile-sidebar">
+    <app-sidebar>
+    </app-sidebar>
+  </div>
+</div>

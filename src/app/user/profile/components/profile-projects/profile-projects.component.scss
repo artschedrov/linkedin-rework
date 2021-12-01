@@ -1,0 +1,36 @@
+@import '../../../../../styles/_variables.scss';
+@import '../../../../../styles/_fonts.scss';
+
+@import '../../../../../styles/_mixins.scss';
+
+.profile-projects {
+  @include blockMainStyle;
+  margin-top: 20px;
+  &__container {
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @include blockTitleStyle;
+    line-height: 17px;
+    span {
+      color: #747474;
+    }
+  }
+  &__project-list {
+    display: flex;
+  }
+  &__project-item {
+    cursor: pointer;
+  }
+  &__project-item + &__project-item {
+    padding-left: 20px;
+  }
+  &__wrapper-link {
+    margin-top: 25px;
+  }
+  &__link {
+    @include blockMoreBtnStyle;
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProfileSidebarVisitors } from 'src/app/user/profile-page/shared/profile.model';
+import { ProfileSidebarVisitors } from 'src/app/user/profile/shared/profile.model';
 import { SidebarService } from 'src/app/user/sidebar/shared/sidebar.service';
 
 @Component({

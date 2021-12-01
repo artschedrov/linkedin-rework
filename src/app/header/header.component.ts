@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SandwitchMenuComponent } from '../user/sandwitch-menu/sandwitch-menu.component';
-import { Profile } from '../user/profile-page/shared/profile.model';
+import { Profile } from '../user/profile/shared/profile.model';
 
 @Component({
   selector: 'app-header',

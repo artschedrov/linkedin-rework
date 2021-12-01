@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProfileSidebarViews } from 'src/app/user/profile-page/shared/profile.model';
+import { ProfileSidebarViews } from 'src/app/user/profile/shared/profile.model';
 
 @Component({
   selector: 'app-profile-sidebar-stats',
