@@ -11,12 +11,12 @@ import { ProfileService } from '../../shared/profile.service';
 })
 export class ProfileExperienceComponent implements OnInit {
 
-  experiences$!: Observable<ProfileExperience[]>
+  experiences: ProfileExperience[] = [];
 
   constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
-    this.experiences$ = this.profileService.getProfileExperience();
+    this.profileService.getProfileExperience().then(experiences => this.experiences = experiences);
   }
 
 }

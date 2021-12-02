@@ -1,4 +1,4 @@
-import { Profile, ProfileProject, ProfileSkills } from "./profile.model";
+import { Profile, ProfileExperience, ProfileProject, ProfileSkills } from "./profile.model";
 
 export const PROFILE: Profile[] = [
   {
@@ -90,5 +90,24 @@ export const PROFILE_SKILLS: ProfileSkills[] = [
       id: '123',
       pic: '../../../../../assets/img/Photo4.png'
     }]
+  }
+]
+
+export const PROFILE_EXPERIENCE: ProfileExperience[] = [
+  {
+    title: 'Freelance UX/UI designer',
+    description: 'Work with clients and web studios as freelancer. Work in next areas: eCommerce web projects; creative landing pages; iOs and Android apps; corporate web sites and corporate identity sometimes',
+    type: 'Self Employed',
+    startDate: 'Jun 2016',
+    endDate: 'Present',
+    pic: '../../../../../assets/img/GroupExp1.png'
+  },
+  {
+    title: 'UX/UI designer',
+    description: 'New experience with Upwork system. Work in next areas: UX/UI design, graphic design, interaction design, UX research.',
+    type: 'Upwork',
+    startDate: 'Jun 2019',
+    endDate: 'Present',
+    pic: '../../../../../assets/img/GroupExp2.png'
   }
 ]
